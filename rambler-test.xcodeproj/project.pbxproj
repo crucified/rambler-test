@@ -15,6 +15,8 @@
 		928A16EA1C90A81C0076B5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928A16E81C90A81C0076B5BF /* LaunchScreen.storyboard */; };
 		928A16F51C90A81C0076B5BF /* rambler_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16F41C90A81C0076B5BF /* rambler_testTests.m */; };
 		928A17001C90A81C0076B5BF /* rambler_testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16FF1C90A81C0076B5BF /* rambler_testUITests.m */; };
+		B65F7FF41C8DAAD08C911E0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 758352B14124EF3D078ED986 /* libPods.a */; };
+		FA44E6E413EE4A4D769B2187 /* libPods-rambler-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A00B666702363D525D7B6B /* libPods-rambler-test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		758352B14124EF3D078ED986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6850B346F36CB27317D001 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		928A16D71C90A81C0076B5BF /* rambler-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rambler-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928A16DB1C90A81C0076B5BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		928A16DD1C90A81C0076B5BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		928A16FB1C90A81C0076B5BF /* rambler-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rambler-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928A16FF1C90A81C0076B5BF /* rambler_testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rambler_testUITests.m; sourceTree = "<group>"; };
 		928A17011C90A81C0076B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B80C794D21CDD2E44327188E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F7A00B666702363D525D7B6B /* libPods-rambler-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rambler-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65F7FF41C8DAAD08C911E0B /* libPods.a in Frameworks */,
+				FA44E6E413EE4A4D769B2187 /* libPods-rambler-test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CBB93DEA09BDF71705C7F18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B80C794D21CDD2E44327188E /* Pods.debug.xcconfig */,
+				7F6850B346F36CB27317D001 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		928A16CE1C90A81C0076B5BF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,8 @@
 				928A16F31C90A81C0076B5BF /* rambler-testTests */,
 				928A16FE1C90A81C0076B5BF /* rambler-testUITests */,
 				928A16D81C90A81C0076B5BF /* Products */,
+				5CBB93DEA09BDF71705C7F18 /* Pods */,
+				BCEB1B099DF6556C8A7FACA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +159,15 @@
 			path = "rambler-testUITests";
 			sourceTree = "<group>";
 		};
+		BCEB1B099DF6556C8A7FACA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				758352B14124EF3D078ED986 /* libPods.a */,
+				F7A00B666702363D525D7B6B /* libPods-rambler-test.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 928A17041C90A81C0076B5BF /* Build configuration list for PBXNativeTarget "rambler-test" */;
 			buildPhases = (
+				9A96E160B5C7BA796FFB31E7 /* Check Pods Manifest.lock */,
 				928A16D31C90A81C0076B5BF /* Sources */,
 				928A16D41C90A81C0076B5BF /* Frameworks */,
 				928A16D51C90A81C0076B5BF /* Resources */,
+				5F3035E07CEA93BB9B6C6960 /* Embed Pods Frameworks */,
+				08A269A8D94BA337BB4DCE26 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +296,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08A269A8D94BA337BB4DCE26 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F3035E07CEA93BB9B6C6960 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A96E160B5C7BA796FFB31E7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		928A16D31C90A81C0076B5BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -363,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -401,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,6 +490,7 @@
 		};
 		928A17051C90A81C0076B5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80C794D21CDD2E44327188E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "rambler-test/Info.plist";
@@ -422,6 +502,7 @@
 		};
 		928A17061C90A81C0076B5BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F6850B346F36CB27317D001 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "rambler-test/Info.plist";
@@ -498,6 +579,7 @@
 				928A17061C90A81C0076B5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		928A17071C90A81C0076B5BF /* Build configuration list for PBXNativeTarget "rambler-testTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +588,7 @@
 				928A17091C90A81C0076B5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		928A170A1C90A81C0076B5BF /* Build configuration list for PBXNativeTarget "rambler-testUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +597,7 @@
 				928A170C1C90A81C0076B5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
