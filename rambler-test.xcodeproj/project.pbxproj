@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		927A95AB1C90B2C4002D9A0A /* RMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 927A95AA1C90B2C4002D9A0A /* RMNetworkManager.m */; };
 		928A16DC1C90A81C0076B5BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16DB1C90A81C0076B5BF /* main.m */; };
 		928A16DF1C90A81C0076B5BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16DE1C90A81C0076B5BF /* AppDelegate.m */; };
 		928A16E21C90A81C0076B5BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16E11C90A81C0076B5BF /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		758352B14124EF3D078ED986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6850B346F36CB27317D001 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		927A95A91C90B2C4002D9A0A /* RMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkManager.h; sourceTree = "<group>"; };
+		927A95AA1C90B2C4002D9A0A /* RMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNetworkManager.m; sourceTree = "<group>"; };
 		928A16D71C90A81C0076B5BF /* rambler-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rambler-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928A16DB1C90A81C0076B5BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		928A16DD1C90A81C0076B5BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +98,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		927A95A81C90B295002D9A0A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				927A95A91C90B2C4002D9A0A /* RMNetworkManager.h */,
+				927A95AA1C90B2C4002D9A0A /* RMNetworkManager.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		928A16CE1C90A81C0076B5BF = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +132,7 @@
 		928A16D91C90A81C0076B5BF /* rambler-test */ = {
 			isa = PBXGroup;
 			children = (
+				927A95A81C90B295002D9A0A /* Controllers */,
 				928A16DD1C90A81C0076B5BF /* AppDelegate.h */,
 				928A16DE1C90A81C0076B5BF /* AppDelegate.m */,
 				928A16E01C90A81C0076B5BF /* ViewController.h */,
@@ -350,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				928A16E21C90A81C0076B5BF /* ViewController.m in Sources */,
+				927A95AB1C90B2C4002D9A0A /* RMNetworkManager.m in Sources */,
 				928A16DF1C90A81C0076B5BF /* AppDelegate.m in Sources */,
 				928A16DC1C90A81C0076B5BF /* main.m in Sources */,
 			);
