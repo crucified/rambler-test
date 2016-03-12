@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "RMLentaRSSController.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) RMLentaRSSController* lentaDownloader;
 
 @end
 
@@ -16,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.lentaDownloader = [RMLentaRSSController new];
+    [self.lentaDownloader downloadNewsWithCompletionHandler:^(id responseObject, NSError *NSError) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
