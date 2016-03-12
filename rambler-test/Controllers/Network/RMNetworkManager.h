@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^RMRequestCompletion)(NSDictionary* response, NSError* error);
+typedef void(^RMRequestCompletion)(NSXMLParser* responseObject, NSError* error);
 
 @interface RMNetworkManager : NSObject
 
