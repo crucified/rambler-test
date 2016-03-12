@@ -47,8 +47,13 @@
 
 -(void) testObtainSuccessOutputSuccessCalled
 {
-    [[self.mockOutput expect] newsObtained:[OCMArg isNotNil]];
+    // given
+    
+    // when
     [self.interactor obtainNews];
+    
+    // then
+    [[[self.mockOutput expect] andDo:^(NSInvocation *invocation){ XCTAssert(YES, @"test passed");}] newsObtained:[OCMArg any]];
     
 }
 

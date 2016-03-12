@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) RMLentaRSSController* lentaNewsController;
 @property (strong, nonatomic) NSArray<RMNewsItem*>* lentaNews;
+
 @end
 
 @implementation RMNewsInteractor
@@ -31,12 +32,21 @@
 #pragma mark - Методы RMNewsInteractorInput
 -(void) obtainNews
 {
-    [self.lentaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
+    NSOperation* downloadOp = [self.lentaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
         if (!error) {
+            DLog(@"1");
             self.lentaNews = news;
-            [self prepareNews];
         }
     }];
+
+    NSOperation* finishOp = [NSBlockOperation blockOperationWithBlock:^{
+        DLog(@"2");
+        [self prepareNews];
+    }];
+    
+    [finishOp addDependency:downloadOp];
+    
+    [[NSOperationQueue mainQueue] addOperation:finishOp];
 }
 
 -(void) prepareNews
