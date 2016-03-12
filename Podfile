@@ -7,3 +7,6 @@ target :'rambler-test' do
 	pod 'AFNetworkActivityLogger'
 end
 
+target :'rambler-testTests' do
+	pod 'OCMock'
+end

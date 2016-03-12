@@ -35,6 +35,7 @@ static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
 {
     __weak typeof(self) weakSelf = self;
     [self.networkManager performGETRequestWithPath:RMLentaNewsPath params:nil completion:^(NSXMLParser *responseObject, NSError *error) {
+        
         [weakSelf.parser parseNewsFromXMLParser:responseObject completion:^(NSArray<RMNewsItem *> *items, NSError *error) {
             if (error){
                 if (completion) {

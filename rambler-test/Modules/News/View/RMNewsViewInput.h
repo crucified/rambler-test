@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class RMNewsItem;
 @protocol RMNewsViewInput <NSObject>
 
 /**
- @author Denis Kharitonov
-
  Метод настраивает начальный стейт view
  */
-- (void)setupInitialState;
+-(void) setupInitialState;
 
+-(void) showNews:(NSArray<RMNewsItem*>*) news;
 @end

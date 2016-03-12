@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class RMNewsItem;
 @protocol RMNewsInteractorOutput <NSObject>
+
+-(void) newsObtained:(NSArray<RMNewsItem*>*) news;
+-(void) newsObtainFailed:(NSError*) error;
 
 @end

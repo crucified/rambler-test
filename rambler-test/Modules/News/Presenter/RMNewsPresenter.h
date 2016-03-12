@@ -8,13 +8,12 @@
 
 #import "RMNewsViewOutput.h"
 #import "RMNewsInteractorOutput.h"
-#import "RMNewsModuleInput.h"
 
 @protocol RMNewsViewInput;
 @protocol RMNewsInteractorInput;
 @protocol RMNewsRouterInput;
 
-@interface RMNewsPresenter : NSObject <RMNewsModuleInput, RMNewsViewOutput, RMNewsInteractorOutput>
+@interface RMNewsPresenter : NSObject <RMNewsViewOutput, RMNewsInteractorOutput>
 
 @property (nonatomic, weak) id<RMNewsViewInput> view;
 @property (nonatomic, strong) id<RMNewsInteractorInput> interactor;

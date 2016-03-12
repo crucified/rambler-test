@@ -11,7 +11,6 @@
 #import "RMNewsViewController.h"
 #import "RMNewsInteractor.h"
 #import "RMNewsPresenter.h"
-#import "RMNewsRouter.h"
 
 @implementation RMNewsAssembly
 
@@ -21,11 +20,9 @@
     RMNewsViewController* newsVC = (RMNewsViewController*)[self instantiateNewsViewController];
     RMNewsPresenter* newsPresenter = [RMNewsPresenter new];
     RMNewsInteractor* newsInteractor = [RMNewsInteractor new];
-    RMNewsRouter* newsRouter = [RMNewsRouter new];
     
     newsVC.output = newsPresenter;
 
-    newsPresenter.router = newsRouter;
     newsPresenter.view = newsVC;
     newsPresenter.interactor = newsInteractor;
     

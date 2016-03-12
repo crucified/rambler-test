@@ -45,4 +45,11 @@
 
 #pragma mark - Тестирование методов RMNewsInteractorInput
 
+-(void) testObtainSuccessOutputSuccessCalled
+{
+    [[self.mockOutput expect] newsObtained:[OCMArg isNotNil]];
+    [self.interactor obtainNews];
+    
+}
+
 @end

@@ -23,7 +23,7 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) RMNewsItem* currentItem;
 @property (assign, nonatomic) RMParseState state;
 @property (strong, nonatomic) NSDateFormatter* dateFormatter;
-
+@property (strong, nonatomic) NSOperationQueue* parseQueue;
 @end
 
 
@@ -36,21 +36,24 @@ typedef enum : NSUInteger {
         NSDateFormatter* dateFormatter = [NSDateFormatter new];
         dateFormatter.dateFormat = @"EEE, dd MM yyyy HH:mm:SS ZZZ";
         _dateFormatter = dateFormatter;
+        _parseQueue = [NSOperationQueue new];
+        _parseQueue.maxConcurrentOperationCount = 1;
+        _parseQueue.qualityOfService = NSQualityOfServiceBackground;
     }
     return self;
 }
 
--(void) parseNewsFromXMLParser:(NSXMLParser *)xmlParser completion:(RMParseCompletion)completion
+-(NSOperation*) parseNewsFromXMLParser:(NSXMLParser *)xmlParser completion:(RMParseCompletion)completion
 {
     self.state = RMParseStateIdle;
     self.parsedItems = [NSMutableArray new];
     self.completion = completion;
     xmlParser.delegate = self;
-    dispatch_queue_t aQueue = dispatch_queue_create("parseQueue", NULL);
-
-    dispatch_async(aQueue, ^{
+    NSBlockOperation* parseOperation = [NSBlockOperation blockOperationWithBlock:^{
         [xmlParser parse];
-    });
+    }];
+    [self.parseQueue addOperation:parseOperation];
+    return parseOperation;
 }
 
 

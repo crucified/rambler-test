@@ -11,6 +11,7 @@
 @class RMNewsItem;
 typedef void(^RMNewsDownloadCompletionHandler)(NSArray* news, NSError* error);
 
+/// Aggregated news class
 @interface RMNews : NSObject
 
 -(void) obtainNewsWithCompletionHandler:(RMNewsDownloadCompletionHandler)completion;

@@ -10,4 +10,6 @@
 
 @protocol RMNewsInteractorInput <NSObject>
 
+-(void) obtainNews;
+
 @end

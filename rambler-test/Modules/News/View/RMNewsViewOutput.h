@@ -11,10 +11,8 @@
 @protocol RMNewsViewOutput <NSObject>
 
 /**
- @author Denis Kharitonov
-
  Метод сообщает презентеру о том, что view готова к работе
  */
-- (void)didTriggerViewReadyEvent;
+-(void) didTriggerViewReadyEvent;
 
 @end
