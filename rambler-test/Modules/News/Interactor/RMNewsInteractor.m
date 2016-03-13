@@ -34,13 +34,11 @@
 {
     NSOperation* downloadOp = [self.lentaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
         if (!error) {
-            DLog(@"1");
             self.lentaNews = news;
         }
     }];
 
     NSOperation* finishOp = [NSBlockOperation blockOperationWithBlock:^{
-        DLog(@"2");
         [self prepareNews];
     }];
     
