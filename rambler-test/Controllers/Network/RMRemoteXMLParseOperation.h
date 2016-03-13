@@ -7,12 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RMLentaParser.h"
+#import "RMNewsParserInterface.h"
+#import "RMNetworkControllerInterface.h"
 
 typedef void(^RMNewsDownloadCompletionHandler)(NSArray* news, NSError* error);
 
 @interface RMRemoteXMLParseOperation : NSOperation
 
-+(instancetype) operationWithPath:(NSString*)path parameters:(NSDictionary*)params parser:(RMLentaParser*)parser completion:(RMNewsDownloadCompletionHandler)completion;
++(instancetype) operationWithPath:(NSString*)path
+                       parameters:(NSDictionary*)params
+                           loader:(id<RMNetworkControllerInterface>)loader
+                           parser:(id<RMNewsParserInterface>)parser
+                       completion:(RMNewsDownloadCompletionHandler)completion;
 
 @end

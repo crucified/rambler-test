@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef void(^RMNewsDownloadCompletionHandler)(NSArray* news, NSError* error);
+#import "RMNewsControllerInterface.h"
 
 /// Lenta news class
-@interface RMLentaRSSController : NSObject
+@interface RMLentaRSSController : NSObject<RMNewsControllerInterface>
 
--(NSOperation*) downloadNewsWithCompletionHandler:(RMNewsDownloadCompletionHandler)completion;
 @end

@@ -10,11 +10,15 @@
 #import "RMNewsInteractorOutput.h"
 #import "RMLentaRSSController.h"
 #import "NSError+CustomErrors.h"
+#import "RMGazetaXMLController.h"
 
 @interface RMNewsInteractor()
 
+
 @property (strong, nonatomic) RMLentaRSSController* lentaNewsController;
+@property (strong, nonatomic) RMGazetaXMLController* gazetaNewsController;
 @property (strong, nonatomic) NSArray<RMNewsItem*>* lentaNews;
+@property (strong, nonatomic) NSArray<RMNewsItem*>* gazetaNews;
 
 @end
 
@@ -25,6 +29,7 @@
     self = [super init];
     if (self) {
         _lentaNewsController = [RMLentaRSSController new];
+        _gazetaNewsController = [RMGazetaXMLController new];
     }
     return self;
 }
@@ -32,17 +37,24 @@
 #pragma mark - Методы RMNewsInteractorInput
 -(void) obtainNews
 {
-    NSOperation* downloadOp = [self.lentaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
+    NSOperation* downloadLentaOp = [self.lentaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
         if (!error) {
             self.lentaNews = news;
         }
     }];
 
+    NSOperation* downloadGazetaOp = [self.gazetaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
+        if (!error) {
+            self.gazetaNews = news;
+        }
+    }];
+    
     NSOperation* finishOp = [NSBlockOperation blockOperationWithBlock:^{
         [self prepareNews];
     }];
     
-    [finishOp addDependency:downloadOp];
+    [finishOp addDependency:downloadLentaOp];
+    [finishOp addDependency:downloadGazetaOp];
     
     [[NSOperationQueue mainQueue] addOperation:finishOp];
 }

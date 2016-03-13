@@ -6,19 +6,18 @@
 //  Copyright © 2016 dp. All rights reserved.
 //
 
-#import "RMNetworkManager.h"
+#import "RMNetworkControllerBase.h"
 #import <AFNetworking/AFNetworking.h>
 #import "NSError+CustomErrors.h"
 
-@interface RMNetworkManager()
+@interface RMNetworkControllerBase()
 
 @property (weak, nonatomic) AFHTTPRequestOperationManager* HTTPmanager;
 @property (strong, nonatomic) NSOperation* currentOperation;
 
 @end
 
-
-@implementation RMNetworkManager
+@implementation RMNetworkControllerBase
 
 -(instancetype) init
 {
@@ -33,8 +32,10 @@
     return self;
 }
 
+
 -(NSOperation*) performGETRequestWithPath:(NSString *)path params:(NSDictionary *)params completion:(RMRequestCompletion)completion
 {
+    DLog(@"%@", self.HTTPmanager.responseSerializer.acceptableContentTypes);
     
     self.currentOperation = [self.HTTPmanager GET:path parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if ([responseObject isKindOfClass:[NSXMLParser class]]) {
@@ -56,5 +57,8 @@
     }];
     return self.currentOperation;
 }
+
+
+
 
 @end

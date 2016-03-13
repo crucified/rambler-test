@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RMNetworkControllerInterface.h"
 
-typedef void(^RMRequestCompletion)(NSXMLParser* responseObject, NSError* error);
 
-@interface RMNetworkManager : NSObject
+@interface RMNetworkControllerBase : NSObject<RMNetworkControllerInterface>
 
 -(NSOperation*) performGETRequestWithPath:(NSString*)path params:(NSDictionary*)params completion:(RMRequestCompletion)completion;
 

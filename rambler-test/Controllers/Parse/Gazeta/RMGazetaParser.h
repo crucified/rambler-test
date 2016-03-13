@@ -1,16 +1,14 @@
 //
-//  RMLentaParser.h
+//  RMGazetaParser.h
 //  rambler-test
 //
-//  Created by Denis Kharitonov on 12.03.16.
+//  Created by Denis Kharitonov on 13.03.16.
 //  Copyright © 2016 dp. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "RMNewsParserInterface.h"
 
-
-@interface RMLentaParser : NSObject<RMNewsParserInterface>
-
+@interface RMGazetaParser : NSObject<RMNewsParserInterface>
 
 @end

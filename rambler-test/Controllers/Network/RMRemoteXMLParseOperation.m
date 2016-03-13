@@ -7,13 +7,11 @@
 //
 
 #import "RMRemoteXMLParseOperation.h"
-#import "RMNetworkManager.h"
-
 
 @interface RMRemoteXMLParseOperation()
 
-@property (strong, nonatomic) RMNetworkManager* networkManager;
-@property (strong, nonatomic) RMLentaParser* parser;
+@property (strong, nonatomic) id<RMNetworkControllerInterface> loader;
+@property (strong, nonatomic) id<RMNewsParserInterface> parser;
 
 @property (assign, nonatomic) BOOL isRunning;
 @property (copy, nonatomic) RMNewsDownloadCompletionHandler completion;
@@ -23,39 +21,38 @@
 
 @implementation RMRemoteXMLParseOperation
 
-+(instancetype) operationWithPath:(NSString *)path parameters:(NSDictionary *)params parser:(RMLentaParser *)parser completion:(RMNewsDownloadCompletionHandler)completion
++(instancetype) operationWithPath:(NSString *)path
+                       parameters:(NSDictionary *)params
+                           loader:(id<RMNetworkControllerInterface>)loader
+                           parser:(id<RMNewsParserInterface>)parser
+                       completion:(RMNewsDownloadCompletionHandler)completion
 {
     RMRemoteXMLParseOperation* op = [RMRemoteXMLParseOperation new];
     op.path = [path copy];
+    op.loader = loader;
     op.parser = parser;
     op.completion = [completion copy];
     
     return op;
 }
 
--(instancetype) init
-{
-    self = [super init];
-    if (self) {
-        _networkManager = [RMNetworkManager new];
-    }
-    return self;
-}
 
+-(void) dealloc
+{
+    
+}
 #pragma mark - NSOperation
 
 -(void) start
 {
     self.isRunning = YES;
     __weak typeof(self) weakSelf = self;
-    [self.networkManager performGETRequestWithPath:self.path params:self.params completion:^(NSXMLParser *responseObject, NSError *error) {
+    [self.loader performGETRequestWithPath:self.path params:self.params completion:^(NSXMLParser *responseObject, NSError *error) {
         [weakSelf.parser parseNewsFromXMLParser:responseObject completion:^(NSArray<RMNewsItem *> *items, NSError *error) {
             [weakSelf willChangeValueForKey:@"isFinished"];
             [weakSelf willChangeValueForKey:@"isExecuting"];
             if (weakSelf.completion) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    weakSelf.completion(items, error);
-                });
+                weakSelf.completion(items, error);
             }
             weakSelf.isRunning = NO;
             [weakSelf didChangeValueForKey:@"isFinished"];

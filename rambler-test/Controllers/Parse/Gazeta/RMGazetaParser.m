@@ -1,14 +1,14 @@
 //
-//  RMLentaParser.m
+//  RMGazetaParser.m
 //  rambler-test
 //
-//  Created by Denis Kharitonov on 12.03.16.
+//  Created by Denis Kharitonov on 13.03.16.
 //  Copyright © 2016 dp. All rights reserved.
 //
 
-#import "RMLentaParser.h"
+#import "RMGazetaParser.h"
 
-@interface RMLentaParser()<NSXMLParserDelegate>
+@interface RMGazetaParser()<NSXMLParserDelegate>
 
 @property (copy, nonatomic) RMParseCompletion completion;
 @property (strong, nonatomic) NSMutableArray* parsedItems;
@@ -19,7 +19,7 @@
 @end
 
 
-@implementation RMLentaParser
+@implementation RMGazetaParser
 
 -(instancetype) init
 {
@@ -90,7 +90,7 @@
 {
     if (self.completion) {
         dispatch_async(dispatch_get_main_queue(), ^{
-          self.completion(self.parsedItems, nil);
+            self.completion(self.parsedItems, nil);
         });
     }
 }
