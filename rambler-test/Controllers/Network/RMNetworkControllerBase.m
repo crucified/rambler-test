@@ -35,7 +35,6 @@
 
 -(NSOperation*) performGETRequestWithPath:(NSString *)path params:(NSDictionary *)params completion:(RMRequestCompletion)completion
 {
-    DLog(@"%@", self.HTTPmanager.responseSerializer.acceptableContentTypes);
     
     self.currentOperation = [self.HTTPmanager GET:path parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if ([responseObject isKindOfClass:[NSXMLParser class]]) {
