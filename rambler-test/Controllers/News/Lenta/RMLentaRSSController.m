@@ -9,13 +9,15 @@
 #import "RMLentaRSSController.h"
 #import "RMNetworkManager.h"
 #import "RMLentaParser.h"
+#import "RMRemoteXMLParseOperation.h"
 
 static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
 
 @interface RMLentaRSSController()
 
-@property (strong, nonatomic) RMNetworkManager* networkManager;
 @property (strong, nonatomic) RMLentaParser* parser;
+@property (assign, nonatomic) BOOL isRunning;
+@property (strong, nonatomic) NSOperationQueue* operationQueue;
 
 @end
 
@@ -25,29 +27,35 @@ static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
 {
     self = [super init];
     if (self) {
-        _networkManager = [RMNetworkManager new];
         _parser = [RMLentaParser new];
+        _operationQueue = [NSOperationQueue new];
+        _operationQueue.qualityOfService = NSQualityOfServiceDefault;
     }
     return self;
 }
 
--(void) downloadNewsWithCompletionHandler:(RMNewsDownloadCompletionHandler)completion
-{
-    __weak typeof(self) weakSelf = self;
-    [self.networkManager performGETRequestWithPath:RMLentaNewsPath params:nil completion:^(NSXMLParser *responseObject, NSError *error) {
-        [weakSelf.parser parseNewsFromXMLParser:responseObject completion:^(NSArray<RMNewsItem *> *items, NSError *error) {
-            if (error){
-                if (completion) {
-                    completion(nil, error);
-                }
+-(NSOperation*) downloadNewsWithCompletionHandler:(RMNewsDownloadCompletionHandler)completion
+{    
+    NSOperation* operation = [RMRemoteXMLParseOperation operationWithPath:RMLentaNewsPath
+                                                               parameters:nil
+                                                                   parser:self.parser
+                                                               completion:^(NSArray *news, NSError *error) {
+        if (error){
+            if (completion) {
+                completion(nil, error);
             }
-            else {
-                if (completion) {
-                    completion(items, error);
-                }
+        }
+        else {
+            if (completion) {
+                completion(news, error);
             }
-        }];
+        }
     }];
+    
+    [self.operationQueue addOperation:operation];
+    
+    return operation;
+    
 }
 
 

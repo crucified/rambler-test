@@ -13,7 +13,6 @@
 
 #import "RMNewsViewInput.h"
 #import "RMNewsInteractorInput.h"
-#import "RMNewsRouterInput.h"
 
 @interface RMNewsPresenterTests : XCTestCase
 

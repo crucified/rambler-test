@@ -10,7 +10,6 @@
 
 #import "RMNewsViewInput.h"
 #import "RMNewsInteractorInput.h"
-#import "RMNewsRouterInput.h"
 
 @implementation RMNewsPresenter
 
@@ -24,8 +23,22 @@
 
 - (void)didTriggerViewReadyEvent {
 	[self.view setupInitialState];
+    [self.interactor obtainNews];
 }
 
+
 #pragma mark - Методы RMNewsInteractorOutput
+-(void) newsObtained:(NSArray<RMNewsItem *> *)news
+{
+    [self.view showNews:news];
+}
+
+-(void) newsObtainFailed:(NSError *)error
+{
+    //TODO: show error
+//    self.view 
+}
+
+
 
 @end

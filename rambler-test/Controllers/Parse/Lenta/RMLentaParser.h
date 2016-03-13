@@ -13,6 +13,6 @@ typedef void(^RMParseCompletion)(NSArray<RMNewsItem*>* items, NSError* error);
 
 @interface RMLentaParser : NSObject
 
--(void) parseNewsFromXMLParser:(NSXMLParser*)xmlParser completion:(RMParseCompletion)completion;
+-(NSOperation*) parseNewsFromXMLParser:(NSXMLParser*)xmlParser completion:(RMParseCompletion)completion;
 
 @end

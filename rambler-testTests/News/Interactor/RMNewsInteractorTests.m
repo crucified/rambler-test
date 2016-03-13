@@ -45,4 +45,16 @@
 
 #pragma mark - Тестирование методов RMNewsInteractorInput
 
+-(void) testObtainSuccessOutputSuccessCalled
+{
+    // given
+    
+    // when
+    [self.interactor obtainNews];
+    
+    // then
+    [[[self.mockOutput expect] andDo:^(NSInvocation *invocation){ XCTAssert(YES, @"test passed");}] newsObtained:[OCMArg any]];
+    
+}
+
 @end

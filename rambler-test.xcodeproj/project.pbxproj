@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		649B9410304EF469C0054797 /* libPods-rambler-testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */; };
 		921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8321C94418F00658345 /* NSError+CustomErrors.m */; };
 		921EA8361C9442B100658345 /* RMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8351C9442B100658345 /* RMNetworkManager.m */; };
 		928A16DC1C90A81C0076B5BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16DB1C90A81C0076B5BF /* main.m */; };
@@ -18,13 +19,16 @@
 		928A17001C90A81C0076B5BF /* rambler_testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16FF1C90A81C0076B5BF /* rambler_testUITests.m */; };
 		92EE98CF1C944B2C00CA3C1B /* RMLentaParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98CE1C944B2C00CA3C1B /* RMLentaParser.m */; };
 		92EE98D61C944B5900CA3C1B /* RMNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98D51C944B5900CA3C1B /* RMNewsItem.m */; };
-		92EE98DD1C94607700CA3C1B /* RMNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98DC1C94607700CA3C1B /* RMNews.m */; };
 		92EE98E31C94623F00CA3C1B /* RMLentaRSSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98E21C94623F00CA3C1B /* RMLentaRSSController.m */; };
 		92EE99191C946B4300CA3C1B /* RMNewsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99061C946B4300CA3C1B /* RMNewsAssembly.m */; };
 		92EE991A1C946B4300CA3C1B /* RMNewsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */; };
 		92EE991B1C946B4300CA3C1B /* RMNewsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE990F1C946B4300CA3C1B /* RMNewsPresenter.m */; };
-		92EE991C1C946B4300CA3C1B /* RMNewsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99121C946B4300CA3C1B /* RMNewsRouter.m */; };
 		92EE991D1C946B4300CA3C1B /* RMNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99161C946B4300CA3C1B /* RMNewsViewController.m */; };
+		92EE992B1C947AD300CA3C1B /* RMNewsInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99231C947AD300CA3C1B /* RMNewsInteractorTests.m */; };
+		92EE992C1C947AD300CA3C1B /* RMNewsPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99251C947AD300CA3C1B /* RMNewsPresenterTests.m */; };
+		92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */; };
+		92F62EA51C94A883004207F9 /* RMRemoteXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EA41C94A883004207F9 /* RMRemoteXMLParseOperation.m */; };
+		92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */; };
 		FA44E6E413EE4A4D769B2187 /* libPods-rambler-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A00B666702363D525D7B6B /* libPods-rambler-test.a */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BA432D77C2E8D779366B9BC /* Pods-rambler-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C5203598FDE02325A1F6ADF /* Pods-rambler-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test.release.xcconfig"; sourceTree = "<group>"; };
 		61564CFD08196BA34F7E65A2 /* Pods-rambler-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test.debug.xcconfig"; sourceTree = "<group>"; };
 		758352B14124EF3D078ED986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6850B346F36CB27317D001 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		921EA8311C94418F00658345 /* NSError+CustomErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+CustomErrors.h"; path = "Extensions/NSError+CustomErrors.h"; sourceTree = "<group>"; };
 		921EA8321C94418F00658345 /* NSError+CustomErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+CustomErrors.m"; path = "Extensions/NSError+CustomErrors.m"; sourceTree = "<group>"; };
 		921EA8341C9442B100658345 /* RMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkManager.h; sourceTree = "<group>"; };
@@ -73,8 +79,6 @@
 		92EE98CE1C944B2C00CA3C1B /* RMLentaParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLentaParser.m; sourceTree = "<group>"; };
 		92EE98D41C944B5900CA3C1B /* RMNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsItem.h; sourceTree = "<group>"; };
 		92EE98D51C944B5900CA3C1B /* RMNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsItem.m; sourceTree = "<group>"; };
-		92EE98DB1C94607700CA3C1B /* RMNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNews.h; sourceTree = "<group>"; };
-		92EE98DC1C94607700CA3C1B /* RMNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNews.m; sourceTree = "<group>"; };
 		92EE98E11C94623F00CA3C1B /* RMLentaRSSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMLentaRSSController.h; sourceTree = "<group>"; };
 		92EE98E21C94623F00CA3C1B /* RMLentaRSSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLentaRSSController.m; sourceTree = "<group>"; };
 		92EE99051C946B4300CA3C1B /* RMNewsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsAssembly.h; sourceTree = "<group>"; };
@@ -83,16 +87,20 @@
 		92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsInteractor.m; sourceTree = "<group>"; };
 		92EE990A1C946B4300CA3C1B /* RMNewsInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsInteractorInput.h; sourceTree = "<group>"; };
 		92EE990B1C946B4300CA3C1B /* RMNewsInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsInteractorOutput.h; sourceTree = "<group>"; };
-		92EE990D1C946B4300CA3C1B /* RMNewsModuleInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsModuleInput.h; sourceTree = "<group>"; };
 		92EE990E1C946B4300CA3C1B /* RMNewsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsPresenter.h; sourceTree = "<group>"; };
 		92EE990F1C946B4300CA3C1B /* RMNewsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsPresenter.m; sourceTree = "<group>"; };
-		92EE99111C946B4300CA3C1B /* RMNewsRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsRouter.h; sourceTree = "<group>"; };
-		92EE99121C946B4300CA3C1B /* RMNewsRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsRouter.m; sourceTree = "<group>"; };
-		92EE99131C946B4300CA3C1B /* RMNewsRouterInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsRouterInput.h; sourceTree = "<group>"; };
 		92EE99151C946B4300CA3C1B /* RMNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsViewController.h; sourceTree = "<group>"; };
 		92EE99161C946B4300CA3C1B /* RMNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsViewController.m; sourceTree = "<group>"; };
 		92EE99171C946B4300CA3C1B /* RMNewsViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsViewInput.h; sourceTree = "<group>"; };
 		92EE99181C946B4300CA3C1B /* RMNewsViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsViewOutput.h; sourceTree = "<group>"; };
+		92EE99231C947AD300CA3C1B /* RMNewsInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsInteractorTests.m; sourceTree = "<group>"; };
+		92EE99251C947AD300CA3C1B /* RMNewsPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsPresenterTests.m; sourceTree = "<group>"; };
+		92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsViewControllerTests.m; sourceTree = "<group>"; };
+		92F62EA31C94A883004207F9 /* RMRemoteXMLParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRemoteXMLParseOperation.h; sourceTree = "<group>"; };
+		92F62EA41C94A883004207F9 /* RMRemoteXMLParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRemoteXMLParseOperation.m; sourceTree = "<group>"; };
+		92F62EB41C94B241004207F9 /* RMNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsTableViewCell.h; sourceTree = "<group>"; };
+		92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsTableViewCell.m; sourceTree = "<group>"; };
+		B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rambler-testTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80C794D21CDD2E44327188E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F7A00B666702363D525D7B6B /* libPods-rambler-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rambler-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649B9410304EF469C0054797 /* libPods-rambler-testTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +139,8 @@
 				7F6850B346F36CB27317D001 /* Pods.release.xcconfig */,
 				61564CFD08196BA34F7E65A2 /* Pods-rambler-test.debug.xcconfig */,
 				5C5203598FDE02325A1F6ADF /* Pods-rambler-test.release.xcconfig */,
+				3BA432D77C2E8D779366B9BC /* Pods-rambler-testTests.debug.xcconfig */,
+				8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -137,6 +148,8 @@
 		921EA82A1C9437D100658345 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				92F62EA31C94A883004207F9 /* RMRemoteXMLParseOperation.h */,
+				92F62EA41C94A883004207F9 /* RMRemoteXMLParseOperation.m */,
 				921EA8341C9442B100658345 /* RMNetworkManager.h */,
 				921EA8351C9442B100658345 /* RMNetworkManager.m */,
 			);
@@ -214,6 +227,7 @@
 		928A16F31C90A81C0076B5BF /* rambler-testTests */ = {
 			isa = PBXGroup;
 			children = (
+				92EE991E1C947AD300CA3C1B /* News */,
 				928A16F41C90A81C0076B5BF /* rambler_testTests.m */,
 				928A16F61C90A81C0076B5BF /* Info.plist */,
 			);
@@ -259,8 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				92EE98E01C94623F00CA3C1B /* Lenta */,
-				92EE98DB1C94607700CA3C1B /* RMNews.h */,
-				92EE98DC1C94607700CA3C1B /* RMNews.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -288,7 +300,6 @@
 				92EE99041C946B4300CA3C1B /* Assembly */,
 				92EE99071C946B4300CA3C1B /* Interactor */,
 				92EE990C1C946B4300CA3C1B /* Presenter */,
-				92EE99101C946B4300CA3C1B /* Router */,
 				92EE99141C946B4300CA3C1B /* View */,
 			);
 			path = News;
@@ -317,26 +328,16 @@
 		92EE990C1C946B4300CA3C1B /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				92EE990D1C946B4300CA3C1B /* RMNewsModuleInput.h */,
 				92EE990E1C946B4300CA3C1B /* RMNewsPresenter.h */,
 				92EE990F1C946B4300CA3C1B /* RMNewsPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		92EE99101C946B4300CA3C1B /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				92EE99111C946B4300CA3C1B /* RMNewsRouter.h */,
-				92EE99121C946B4300CA3C1B /* RMNewsRouter.m */,
-				92EE99131C946B4300CA3C1B /* RMNewsRouterInput.h */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		92EE99141C946B4300CA3C1B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				92F62EB31C94B241004207F9 /* TableViewCell */,
 				92EE99151C946B4300CA3C1B /* RMNewsViewController.h */,
 				92EE99161C946B4300CA3C1B /* RMNewsViewController.m */,
 				92EE99171C946B4300CA3C1B /* RMNewsViewInput.h */,
@@ -345,11 +346,55 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		92EE991E1C947AD300CA3C1B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99221C947AD300CA3C1B /* Interactor */,
+				92EE99241C947AD300CA3C1B /* Presenter */,
+				92EE99281C947AD300CA3C1B /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		92EE99221C947AD300CA3C1B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99231C947AD300CA3C1B /* RMNewsInteractorTests.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		92EE99241C947AD300CA3C1B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99251C947AD300CA3C1B /* RMNewsPresenterTests.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		92EE99281C947AD300CA3C1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92F62EB31C94B241004207F9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				92F62EB41C94B241004207F9 /* RMNewsTableViewCell.h */,
+				92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		BCEB1B099DF6556C8A7FACA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				758352B14124EF3D078ED986 /* libPods.a */,
 				F7A00B666702363D525D7B6B /* libPods-rambler-test.a */,
+				B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -381,9 +426,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 928A17071C90A81C0076B5BF /* Build configuration list for PBXNativeTarget "rambler-testTests" */;
 			buildPhases = (
+				A3D272BDABE0AA706049A04D /* Check Pods Manifest.lock */,
 				928A16EC1C90A81C0076B5BF /* Sources */,
 				928A16ED1C90A81C0076B5BF /* Frameworks */,
 				928A16EE1C90A81C0076B5BF /* Resources */,
+				B84907359FA7E27C6BB32321 /* Embed Pods Frameworks */,
+				5E716A4FED74BE0F7030E0E7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -498,6 +546,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5E716A4FED74BE0F7030E0E7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5F3035E07CEA93BB9B6C6960 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,6 +591,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		A3D272BDABE0AA706049A04D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B84907359FA7E27C6BB32321 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -537,13 +630,13 @@
 			files = (
 				92EE98D61C944B5900CA3C1B /* RMNewsItem.m in Sources */,
 				92EE98E31C94623F00CA3C1B /* RMLentaRSSController.m in Sources */,
+				92F62EA51C94A883004207F9 /* RMRemoteXMLParseOperation.m in Sources */,
 				92EE99191C946B4300CA3C1B /* RMNewsAssembly.m in Sources */,
+				92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */,
 				92EE991D1C946B4300CA3C1B /* RMNewsViewController.m in Sources */,
 				92EE991B1C946B4300CA3C1B /* RMNewsPresenter.m in Sources */,
 				928A16DF1C90A81C0076B5BF /* AppDelegate.m in Sources */,
 				92EE98CF1C944B2C00CA3C1B /* RMLentaParser.m in Sources */,
-				92EE991C1C946B4300CA3C1B /* RMNewsRouter.m in Sources */,
-				92EE98DD1C94607700CA3C1B /* RMNews.m in Sources */,
 				928A16DC1C90A81C0076B5BF /* main.m in Sources */,
 				921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */,
 				92EE991A1C946B4300CA3C1B /* RMNewsInteractor.m in Sources */,
@@ -555,7 +648,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EE992C1C947AD300CA3C1B /* RMNewsPresenterTests.m in Sources */,
 				928A16F51C90A81C0076B5BF /* rambler_testTests.m in Sources */,
+				92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */,
+				92EE992B1C947AD300CA3C1B /* RMNewsInteractorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +810,7 @@
 		};
 		928A17081C90A81C0076B5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BA432D77C2E8D779366B9BC /* Pods-rambler-testTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "rambler-testTests/Info.plist";
@@ -726,6 +823,7 @@
 		};
 		928A17091C90A81C0076B5BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "rambler-testTests/Info.plist";

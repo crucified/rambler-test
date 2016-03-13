@@ -10,7 +10,8 @@
 
 typedef void(^RMNewsDownloadCompletionHandler)(NSArray* news, NSError* error);
 
+/// Lenta news class
 @interface RMLentaRSSController : NSObject
 
--(void) downloadNewsWithCompletionHandler:(RMNewsDownloadCompletionHandler)completion;
+-(NSOperation*) downloadNewsWithCompletionHandler:(RMNewsDownloadCompletionHandler)completion;
 @end
