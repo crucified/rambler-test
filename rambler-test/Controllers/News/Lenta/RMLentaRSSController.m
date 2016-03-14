@@ -7,7 +7,7 @@
 //
 
 #import "RMLentaRSSController.h"
-#import "RMNetworkManager.h"
+#import "RMNetworkControllerBase.h"
 #import "RMLentaParser.h"
 #import "RMRemoteXMLParseOperation.h"
 
@@ -15,8 +15,8 @@ static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
 
 @interface RMLentaRSSController()
 
-@property (strong, nonatomic) RMLentaParser* parser;
-@property (assign, nonatomic) BOOL isRunning;
+@property (strong, nonatomic) id<RMNewsParserInterface> parser;
+@property (strong, nonatomic) id<RMNetworkControllerInterface> networkController;
 @property (strong, nonatomic) NSOperationQueue* operationQueue;
 
 @end
@@ -28,6 +28,7 @@ static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
     self = [super init];
     if (self) {
         _parser = [RMLentaParser new];
+        _networkController = [RMNetworkControllerBase new];
         _operationQueue = [NSOperationQueue new];
         _operationQueue.qualityOfService = NSQualityOfServiceDefault;
     }
@@ -38,6 +39,7 @@ static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
 {    
     NSOperation* operation = [RMRemoteXMLParseOperation operationWithPath:RMLentaNewsPath
                                                                parameters:nil
+                                                                   loader:self.networkController
                                                                    parser:self.parser
                                                                completion:^(NSArray *news, NSError *error) {
         if (error){

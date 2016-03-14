@@ -27,15 +27,9 @@ static NSString* const RMNewsCellReuseID = @"newsCell";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-    [self configureTableView];
 	[self.output didTriggerViewReadyEvent];
 }
 
--(void) configureTableView
-{
-//    self.tableView.estimatedRowHeight = 44.0;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
-}
 
 #pragma mark - Методы RMNewsViewInput
 
@@ -73,7 +67,7 @@ static NSString* const RMNewsCellReuseID = @"newsCell";
     label.numberOfLines = 0;
     label.font = font;
     label.text = news.newsDescription;
-
+    
     DLog(@"%@", NSStringFromCGRect(self.tableView.bounds));
     CGSize newSize = [label sizeThatFits:CGSizeMake(self.tableView.bounds.size.width, CGFLOAT_MAX)];
     

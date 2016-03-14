@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		649B9410304EF469C0054797 /* libPods-rambler-testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */; };
 		921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8321C94418F00658345 /* NSError+CustomErrors.m */; };
-		921EA8361C9442B100658345 /* RMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8351C9442B100658345 /* RMNetworkManager.m */; };
+		921EA8361C9442B100658345 /* RMNetworkControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8351C9442B100658345 /* RMNetworkControllerBase.m */; };
 		928A16DC1C90A81C0076B5BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16DB1C90A81C0076B5BF /* main.m */; };
 		928A16DF1C90A81C0076B5BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16DE1C90A81C0076B5BF /* AppDelegate.m */; };
 		928A16E51C90A81C0076B5BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928A16E31C90A81C0076B5BF /* Main.storyboard */; };
@@ -29,6 +29,8 @@
 		92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */; };
 		92F62EA51C94A883004207F9 /* RMRemoteXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EA41C94A883004207F9 /* RMRemoteXMLParseOperation.m */; };
 		92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */; };
+		92F62EBC1C95D88B004207F9 /* RMGazetaXMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EBB1C95D88B004207F9 /* RMGazetaXMLController.m */; };
+		92F62ED41C95F1DF004207F9 /* RMGazetaParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62ED31C95F1DF004207F9 /* RMGazetaParser.m */; };
 		FA44E6E413EE4A4D769B2187 /* libPods-rambler-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A00B666702363D525D7B6B /* libPods-rambler-test.a */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +60,8 @@
 		8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		921EA8311C94418F00658345 /* NSError+CustomErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+CustomErrors.h"; path = "Extensions/NSError+CustomErrors.h"; sourceTree = "<group>"; };
 		921EA8321C94418F00658345 /* NSError+CustomErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+CustomErrors.m"; path = "Extensions/NSError+CustomErrors.m"; sourceTree = "<group>"; };
-		921EA8341C9442B100658345 /* RMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkManager.h; sourceTree = "<group>"; };
-		921EA8351C9442B100658345 /* RMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNetworkManager.m; sourceTree = "<group>"; };
+		921EA8341C9442B100658345 /* RMNetworkControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkControllerBase.h; sourceTree = "<group>"; };
+		921EA8351C9442B100658345 /* RMNetworkControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNetworkControllerBase.m; sourceTree = "<group>"; };
 		921EA8371C9445FF00658345 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		928A16D71C90A81C0076B5BF /* rambler-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rambler-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928A16DB1C90A81C0076B5BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,6 +102,13 @@
 		92F62EA41C94A883004207F9 /* RMRemoteXMLParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRemoteXMLParseOperation.m; sourceTree = "<group>"; };
 		92F62EB41C94B241004207F9 /* RMNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsTableViewCell.h; sourceTree = "<group>"; };
 		92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsTableViewCell.m; sourceTree = "<group>"; };
+		92F62EBA1C95D88B004207F9 /* RMGazetaXMLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMGazetaXMLController.h; path = Gazeta/RMGazetaXMLController.h; sourceTree = "<group>"; };
+		92F62EBB1C95D88B004207F9 /* RMGazetaXMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMGazetaXMLController.m; path = Gazeta/RMGazetaXMLController.m; sourceTree = "<group>"; };
+		92F62EBD1C95D8CF004207F9 /* RMNewsControllerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMNewsControllerInterface.h; sourceTree = "<group>"; };
+		92F62EBE1C95DA56004207F9 /* RMNewsParserInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMNewsParserInterface.h; sourceTree = "<group>"; };
+		92F62EBF1C95E02D004207F9 /* RMNetworkControllerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMNetworkControllerInterface.h; sourceTree = "<group>"; };
+		92F62ED21C95F1DF004207F9 /* RMGazetaParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGazetaParser.h; sourceTree = "<group>"; };
+		92F62ED31C95F1DF004207F9 /* RMGazetaParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGazetaParser.m; sourceTree = "<group>"; };
 		B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rambler-testTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80C794D21CDD2E44327188E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F7A00B666702363D525D7B6B /* libPods-rambler-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rambler-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,8 +159,9 @@
 			children = (
 				92F62EA31C94A883004207F9 /* RMRemoteXMLParseOperation.h */,
 				92F62EA41C94A883004207F9 /* RMRemoteXMLParseOperation.m */,
-				921EA8341C9442B100658345 /* RMNetworkManager.h */,
-				921EA8351C9442B100658345 /* RMNetworkManager.m */,
+				921EA8341C9442B100658345 /* RMNetworkControllerBase.h */,
+				921EA8351C9442B100658345 /* RMNetworkControllerBase.m */,
+				92F62EBF1C95E02D004207F9 /* RMNetworkControllerInterface.h */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -246,7 +256,9 @@
 		92EE98CB1C944B2C00CA3C1B /* Parse */ = {
 			isa = PBXGroup;
 			children = (
+				92F62ED11C95F1DF004207F9 /* Gazeta */,
 				92EE98CC1C944B2C00CA3C1B /* Lenta */,
+				92F62EBE1C95DA56004207F9 /* RMNewsParserInterface.h */,
 			);
 			path = Parse;
 			sourceTree = "<group>";
@@ -272,7 +284,9 @@
 		92EE98DA1C94607700CA3C1B /* News */ = {
 			isa = PBXGroup;
 			children = (
+				92F62EB91C95D858004207F9 /* Gazeta */,
 				92EE98E01C94623F00CA3C1B /* Lenta */,
+				92F62EBD1C95D8CF004207F9 /* RMNewsControllerInterface.h */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -387,6 +401,24 @@
 				92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		92F62EB91C95D858004207F9 /* Gazeta */ = {
+			isa = PBXGroup;
+			children = (
+				92F62EBA1C95D88B004207F9 /* RMGazetaXMLController.h */,
+				92F62EBB1C95D88B004207F9 /* RMGazetaXMLController.m */,
+			);
+			name = Gazeta;
+			sourceTree = "<group>";
+		};
+		92F62ED11C95F1DF004207F9 /* Gazeta */ = {
+			isa = PBXGroup;
+			children = (
+				92F62ED21C95F1DF004207F9 /* RMGazetaParser.h */,
+				92F62ED31C95F1DF004207F9 /* RMGazetaParser.m */,
+			);
+			path = Gazeta;
 			sourceTree = "<group>";
 		};
 		BCEB1B099DF6556C8A7FACA0 /* Frameworks */ = {
@@ -630,8 +662,10 @@
 			files = (
 				92EE98D61C944B5900CA3C1B /* RMNewsItem.m in Sources */,
 				92EE98E31C94623F00CA3C1B /* RMLentaRSSController.m in Sources */,
+				92F62ED41C95F1DF004207F9 /* RMGazetaParser.m in Sources */,
 				92F62EA51C94A883004207F9 /* RMRemoteXMLParseOperation.m in Sources */,
 				92EE99191C946B4300CA3C1B /* RMNewsAssembly.m in Sources */,
+				92F62EBC1C95D88B004207F9 /* RMGazetaXMLController.m in Sources */,
 				92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */,
 				92EE991D1C946B4300CA3C1B /* RMNewsViewController.m in Sources */,
 				92EE991B1C946B4300CA3C1B /* RMNewsPresenter.m in Sources */,
@@ -640,7 +674,7 @@
 				928A16DC1C90A81C0076B5BF /* main.m in Sources */,
 				921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */,
 				92EE991A1C946B4300CA3C1B /* RMNewsInteractor.m in Sources */,
-				921EA8361C9442B100658345 /* RMNetworkManager.m in Sources */,
+				921EA8361C9442B100658345 /* RMNetworkControllerBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

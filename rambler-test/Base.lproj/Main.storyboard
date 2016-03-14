@@ -29,9 +29,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="209"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-uT-puu">
-                                                    <rect key="frame" x="124" y="45" width="420" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-uT-puu">
+                                                    <rect key="frame" x="124" y="16" width="420" height="80"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -43,7 +43,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIW-G0-YOd">
-                                                    <rect key="frame" x="16" y="104" width="528" height="89"/>
+                                                    <rect key="frame" x="16" y="104" width="528" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -56,8 +56,8 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="EIW-G0-YOd" secondAttribute="trailing" constant="8" id="Qnd-hh-KOJ"/>
                                                 <constraint firstItem="EIW-G0-YOd" firstAttribute="leading" secondItem="jId-x9-WNU" secondAttribute="leadingMargin" constant="8" id="fs3-Az-sWu"/>
                                                 <constraint firstItem="EFx-ZM-07y" firstAttribute="leading" secondItem="jId-x9-WNU" secondAttribute="leadingMargin" constant="8" id="gWV-Bs-2Fi"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="EIW-G0-YOd" secondAttribute="bottom" constant="8" id="jgQ-Gl-aV9"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="WgO-uT-puu" secondAttribute="trailing" constant="8" id="sdx-es-bn8"/>
+                                                <constraint firstItem="WgO-uT-puu" firstAttribute="height" secondItem="EFx-ZM-07y" secondAttribute="height" id="tfX-BS-YVt"/>
                                                 <constraint firstItem="WgO-uT-puu" firstAttribute="centerY" secondItem="EFx-ZM-07y" secondAttribute="centerY" id="wbu-nA-kdK"/>
                                             </constraints>
                                         </tableViewCellContentView>
