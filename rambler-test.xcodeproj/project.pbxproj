@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		649B9410304EF469C0054797 /* libPods-rambler-testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */; };
 		921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8321C94418F00658345 /* NSError+CustomErrors.m */; };
+		924770C31C9EF9F000B961C3 /* RMNewsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */; };
 		925D21091C974E4000389E30 /* RMNetworkControllerBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */; };
 		925D21111C9EC34E00389E30 /* RMNetworkControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D210E1C9EC34E00389E30 /* RMNetworkControllerBase.m */; };
 		925D21151C9EC37C00389E30 /* RMRemoteXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21141C9EC37C00389E30 /* RMRemoteXMLParseOperation.m */; };
@@ -26,7 +27,7 @@
 		928A16EA1C90A81C0076B5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928A16E81C90A81C0076B5BF /* LaunchScreen.storyboard */; };
 		928A17001C90A81C0076B5BF /* rambler_testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16FF1C90A81C0076B5BF /* rambler_testUITests.m */; };
 		92EE98D61C944B5900CA3C1B /* RMNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98D51C944B5900CA3C1B /* RMNewsItem.m */; };
-		92EE98E31C94623F00CA3C1B /* RMLentaRSSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98E21C94623F00CA3C1B /* RMLentaRSSController.m */; };
+		92EE98E31C94623F00CA3C1B /* RMNewsControllerLenta.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98E21C94623F00CA3C1B /* RMNewsControllerLenta.m */; };
 		92EE99191C946B4300CA3C1B /* RMNewsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99061C946B4300CA3C1B /* RMNewsAssembly.m */; };
 		92EE991A1C946B4300CA3C1B /* RMNewsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */; };
 		92EE991B1C946B4300CA3C1B /* RMNewsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE990F1C946B4300CA3C1B /* RMNewsPresenter.m */; };
@@ -35,7 +36,7 @@
 		92EE992C1C947AD300CA3C1B /* RMNewsPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99251C947AD300CA3C1B /* RMNewsPresenterTests.m */; };
 		92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */; };
 		92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */; };
-		92F62EBC1C95D88B004207F9 /* RMGazetaXMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EBB1C95D88B004207F9 /* RMGazetaXMLController.m */; };
+		92F62EBC1C95D88B004207F9 /* RMNewsControllerGazeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EBB1C95D88B004207F9 /* RMNewsControllerGazeta.m */; };
 		92F62ED41C95F1DF004207F9 /* RMGazetaParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */; };
 		FA44E6E413EE4A4D769B2187 /* libPods-rambler-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A00B666702363D525D7B6B /* libPods-rambler-test.a */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		921EA8311C94418F00658345 /* NSError+CustomErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+CustomErrors.h"; path = "Extensions/NSError+CustomErrors.h"; sourceTree = "<group>"; };
 		921EA8321C94418F00658345 /* NSError+CustomErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+CustomErrors.m"; path = "Extensions/NSError+CustomErrors.m"; sourceTree = "<group>"; };
 		921EA8371C9445FF00658345 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		924770C21C9EF93500B961C3 /* RMNewsInteractor_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsInteractor_Private.h; sourceTree = "<group>"; };
 		925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNetworkControllerBaseTests.m; sourceTree = "<group>"; };
 		925D210D1C9EC34E00389E30 /* RMNetworkControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkControllerBase.h; sourceTree = "<group>"; };
 		925D210E1C9EC34E00389E30 /* RMNetworkControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNetworkControllerBase.m; sourceTree = "<group>"; };
@@ -102,8 +104,8 @@
 		928A17011C90A81C0076B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92EE98D41C944B5900CA3C1B /* RMNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsItem.h; sourceTree = "<group>"; };
 		92EE98D51C944B5900CA3C1B /* RMNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsItem.m; sourceTree = "<group>"; };
-		92EE98E11C94623F00CA3C1B /* RMLentaRSSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMLentaRSSController.h; sourceTree = "<group>"; };
-		92EE98E21C94623F00CA3C1B /* RMLentaRSSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLentaRSSController.m; sourceTree = "<group>"; };
+		92EE98E11C94623F00CA3C1B /* RMNewsControllerLenta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsControllerLenta.h; sourceTree = "<group>"; };
+		92EE98E21C94623F00CA3C1B /* RMNewsControllerLenta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsControllerLenta.m; sourceTree = "<group>"; };
 		92EE99051C946B4300CA3C1B /* RMNewsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsAssembly.h; sourceTree = "<group>"; };
 		92EE99061C946B4300CA3C1B /* RMNewsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsAssembly.m; sourceTree = "<group>"; };
 		92EE99081C946B4300CA3C1B /* RMNewsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsInteractor.h; sourceTree = "<group>"; };
@@ -121,8 +123,8 @@
 		92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsViewControllerTests.m; sourceTree = "<group>"; };
 		92F62EB41C94B241004207F9 /* RMNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsTableViewCell.h; sourceTree = "<group>"; };
 		92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsTableViewCell.m; sourceTree = "<group>"; };
-		92F62EBA1C95D88B004207F9 /* RMGazetaXMLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMGazetaXMLController.h; path = Gazeta/RMGazetaXMLController.h; sourceTree = "<group>"; };
-		92F62EBB1C95D88B004207F9 /* RMGazetaXMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMGazetaXMLController.m; path = Gazeta/RMGazetaXMLController.m; sourceTree = "<group>"; };
+		92F62EBA1C95D88B004207F9 /* RMNewsControllerGazeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMNewsControllerGazeta.h; path = Gazeta/RMNewsControllerGazeta.h; sourceTree = "<group>"; };
+		92F62EBB1C95D88B004207F9 /* RMNewsControllerGazeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMNewsControllerGazeta.m; path = Gazeta/RMNewsControllerGazeta.m; sourceTree = "<group>"; };
 		92F62EBD1C95D8CF004207F9 /* RMNewsControllerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMNewsControllerInterface.h; sourceTree = "<group>"; };
 		92F62ED21C95F1DF004207F9 /* RMGazetaParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGazetaParseOperation.h; sourceTree = "<group>"; };
 		92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGazetaParseOperation.m; sourceTree = "<group>"; };
@@ -355,8 +357,8 @@
 		92EE98E01C94623F00CA3C1B /* Lenta */ = {
 			isa = PBXGroup;
 			children = (
-				92EE98E11C94623F00CA3C1B /* RMLentaRSSController.h */,
-				92EE98E21C94623F00CA3C1B /* RMLentaRSSController.m */,
+				92EE98E11C94623F00CA3C1B /* RMNewsControllerLenta.h */,
+				92EE98E21C94623F00CA3C1B /* RMNewsControllerLenta.m */,
 			);
 			path = Lenta;
 			sourceTree = "<group>";
@@ -396,6 +398,7 @@
 				92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */,
 				92EE990A1C946B4300CA3C1B /* RMNewsInteractorInput.h */,
 				92EE990B1C946B4300CA3C1B /* RMNewsInteractorOutput.h */,
+				924770C21C9EF93500B961C3 /* RMNewsInteractor_Private.h */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -467,8 +470,8 @@
 		92F62EB91C95D858004207F9 /* Gazeta */ = {
 			isa = PBXGroup;
 			children = (
-				92F62EBA1C95D88B004207F9 /* RMGazetaXMLController.h */,
-				92F62EBB1C95D88B004207F9 /* RMGazetaXMLController.m */,
+				92F62EBA1C95D88B004207F9 /* RMNewsControllerGazeta.h */,
+				92F62EBB1C95D88B004207F9 /* RMNewsControllerGazeta.m */,
 			);
 			name = Gazeta;
 			sourceTree = "<group>";
@@ -726,11 +729,11 @@
 			files = (
 				925D212A1C9EEA9500389E30 /* RMLentaParseOperation.m in Sources */,
 				92EE98D61C944B5900CA3C1B /* RMNewsItem.m in Sources */,
-				92EE98E31C94623F00CA3C1B /* RMLentaRSSController.m in Sources */,
+				92EE98E31C94623F00CA3C1B /* RMNewsControllerLenta.m in Sources */,
 				92F62ED41C95F1DF004207F9 /* RMGazetaParseOperation.m in Sources */,
 				92EE99191C946B4300CA3C1B /* RMNewsAssembly.m in Sources */,
 				925D21151C9EC37C00389E30 /* RMRemoteXMLParseOperation.m in Sources */,
-				92F62EBC1C95D88B004207F9 /* RMGazetaXMLController.m in Sources */,
+				92F62EBC1C95D88B004207F9 /* RMNewsControllerGazeta.m in Sources */,
 				92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */,
 				925D21401C9EF30A00389E30 /* RMNewsParser.m in Sources */,
 				92EE991D1C946B4300CA3C1B /* RMNewsViewController.m in Sources */,
@@ -752,6 +755,7 @@
 				92EE992C1C947AD300CA3C1B /* RMNewsPresenterTests.m in Sources */,
 				925D21171C9ECADA00389E30 /* RMNewsParserTests.m in Sources */,
 				92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */,
+				924770C31C9EF9F000B961C3 /* RMNewsInteractor.m in Sources */,
 				92EE992B1C947AD300CA3C1B /* RMNewsInteractorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

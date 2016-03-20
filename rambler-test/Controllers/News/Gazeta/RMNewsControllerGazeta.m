@@ -1,47 +1,48 @@
 //
-//  ;
+//  RMGazetaXMLController.m
 //  rambler-test
 //
-//  Created by Denis Kharitonov on 12.03.16.
+//  Created by Denis Kharitonov on 13.03.16.
 //  Copyright © 2016 dp. All rights reserved.
 //
 
-#import "RMLentaRSSController.h"
+#import "RMNewsControllerGazeta.h"
+#import "RMRemoteXMLParseOperation.h"
 #import "RMNetworkControllerBase.h"
 #import "RMNewsParser.h"
-#import "RMRemoteXMLParseOperation.h"
 
-static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
+static NSString* const RMGazetaNewsPath = @"http://www.gazeta.ru/export/rss/lenta.xml";
 
-@interface RMLentaRSSController()
+@interface RMNewsControllerGazeta()
 
-@property (weak, nonatomic) id<RMNewsParserInterface> parser;
 @property (strong, nonatomic) id<RMNetworkControllerInterface> networkController;
+@property (weak, nonatomic) id<RMNewsParserInterface> parser;
 @property (strong, nonatomic) NSOperationQueue* operationQueue;
 
 @end
 
-@implementation RMLentaRSSController
+
+@implementation RMNewsControllerGazeta
 
 -(instancetype) init
 {
     self = [super init];
     if (self) {
-        _parser = [RMNewsParser sharedInstance];
-        _networkController = [RMNetworkControllerBase new];
         _operationQueue = [NSOperationQueue new];
         _operationQueue.qualityOfService = NSQualityOfServiceDefault;
+        _networkController = [RMNetworkControllerBase new];
+        _parser = [RMNewsParser sharedInstance];
     }
     return self;
 }
 
 -(NSOperation*) downloadNewsWithCompletionHandler:(RMNewsDownloadCompletionHandler)completion
-{    
-    NSOperation* operation = [RMRemoteXMLParseOperation operationWithPath:RMLentaNewsPath
+{
+    NSOperation* operation = [RMRemoteXMLParseOperation operationWithPath:RMGazetaNewsPath
                                                                parameters:nil
                                                                    loader:self.networkController
-                                                                   parser:self.parser
-                                                               sourceType:RMParseSourceTypeLenta
+                                                                   parser:_parser
+                                                               sourceType:RMParseSourceTypeGazeta
                                                                completion:^(NSArray *news, NSError *error)
                               {
                                   if (error){
@@ -60,7 +61,7 @@ static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
     
     return operation;
     
+    
 }
-
 
 @end

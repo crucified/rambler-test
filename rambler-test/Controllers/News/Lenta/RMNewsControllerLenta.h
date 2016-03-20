@@ -10,6 +10,6 @@
 #import "RMNewsControllerInterface.h"
 
 /// Lenta news class
-@interface RMLentaRSSController : NSObject<RMNewsControllerInterface>
+@interface RMNewsControllerLenta : NSObject<RMNewsControllerInterface>
 
 @end
