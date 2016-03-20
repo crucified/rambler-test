@@ -7,15 +7,8 @@
 //
 
 #import "RMNetworkControllerBase.h"
-#import <AFNetworking/AFNetworking.h>
 #import "NSError+CustomErrors.h"
-
-@interface RMNetworkControllerBase()
-
-@property (weak, nonatomic) AFHTTPRequestOperationManager* HTTPmanager;
-@property (strong, nonatomic) NSOperation* currentOperation;
-
-@end
+#import "RMNetworkControllerBase_Private.h"
 
 @implementation RMNetworkControllerBase
 
@@ -49,6 +42,10 @@
         }
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         if (!operation.cancelled) {
+            if (![error isKindOfClass:[NSError class]]) {
+                error = [NSError badServerResponseError];
+            }
+            
             if (completion){
                 completion(nil, error);
             }

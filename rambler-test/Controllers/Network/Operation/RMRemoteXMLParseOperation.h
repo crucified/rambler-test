@@ -18,6 +18,7 @@ typedef void(^RMNewsDownloadCompletionHandler)(NSArray* news, NSError* error);
                        parameters:(NSDictionary*)params
                            loader:(id<RMNetworkControllerInterface>)loader
                            parser:(id<RMNewsParserInterface>)parser
+                       sourceType:(RMParseSourceType)parseSourceType
                        completion:(RMNewsDownloadCompletionHandler)completion;
 
 @end

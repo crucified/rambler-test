@@ -1,5 +1,4 @@
 //
-//  RMLentaParser.h
 //  rambler-test
 //
 //  Created by Denis Kharitonov on 12.03.16.
@@ -10,7 +9,8 @@
 #import "RMNewsParserInterface.h"
 
 
-@interface RMLentaParser : NSObject<RMNewsParserInterface>
+@interface RMNewsParser : NSObject<RMNewsParserInterface>
 
++(instancetype) sharedInstance;
 
 @end

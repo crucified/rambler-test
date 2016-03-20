@@ -8,10 +8,11 @@
 
 #import <XCTest/XCTest.h>
 #import <OCMock/OCMock.h>
+#import <AFNetworking/AFNetworking.h>
 
 #import "RMNewsInteractor.h"
-
 #import "RMNewsInteractorOutput.h"
+
 
 @interface RMNewsInteractorTests : XCTestCase
 
@@ -56,5 +57,6 @@
     [[[self.mockOutput expect] andDo:^(NSInvocation *invocation){ XCTAssert(YES, @"test passed");}] newsObtained:[OCMArg any]];
     
 }
+
 
 @end

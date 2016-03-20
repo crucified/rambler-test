@@ -8,14 +8,14 @@
 
 #import "RMLentaRSSController.h"
 #import "RMNetworkControllerBase.h"
-#import "RMLentaParser.h"
+#import "RMNewsParser.h"
 #import "RMRemoteXMLParseOperation.h"
 
 static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
 
 @interface RMLentaRSSController()
 
-@property (strong, nonatomic) id<RMNewsParserInterface> parser;
+@property (weak, nonatomic) id<RMNewsParserInterface> parser;
 @property (strong, nonatomic) id<RMNetworkControllerInterface> networkController;
 @property (strong, nonatomic) NSOperationQueue* operationQueue;
 
@@ -27,7 +27,7 @@ static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
 {
     self = [super init];
     if (self) {
-        _parser = [RMLentaParser new];
+        _parser = [RMNewsParser sharedInstance];
         _networkController = [RMNetworkControllerBase new];
         _operationQueue = [NSOperationQueue new];
         _operationQueue.qualityOfService = NSQualityOfServiceDefault;
@@ -41,18 +41,20 @@ static NSString* const RMLentaNewsPath = @"http://lenta.ru/rss";
                                                                parameters:nil
                                                                    loader:self.networkController
                                                                    parser:self.parser
-                                                               completion:^(NSArray *news, NSError *error) {
-        if (error){
-            if (completion) {
-                completion(nil, error);
-            }
-        }
-        else {
-            if (completion) {
-                completion(news, error);
-            }
-        }
-    }];
+                                                               sourceType:RMParseSourceTypeLenta
+                                                               completion:^(NSArray *news, NSError *error)
+                              {
+                                  if (error){
+                                      if (completion) {
+                                          completion(nil, error);
+                                      }
+                                  }
+                                  else {
+                                      if (completion) {
+                                          completion(news, error);
+                                      }
+                                  }
+                              }];
     
     [self.operationQueue addOperation:operation];
     

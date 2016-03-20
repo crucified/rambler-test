@@ -1,54 +1,57 @@
 //
-//  RMLentaParser.m
+//  RMParseOperation.m
 //  rambler-test
 //
-//  Created by Denis Kharitonov on 12.03.16.
+//  Created by Denis Kharitonov on 20.03.16.
 //  Copyright © 2016 dp. All rights reserved.
 //
 
-#import "RMLentaParser.h"
+#import "RMLentaParseOperation.h"
+#import "RMNewsItem.h"
 
-@interface RMLentaParser()<NSXMLParserDelegate>
-
-@property (copy, nonatomic) RMParseCompletion completion;
-@property (strong, nonatomic) NSMutableArray* parsedItems;
+@interface RMLentaParseOperation()<NSXMLParserDelegate>
+@property (strong, nonatomic) NSMutableArray* operationalParsedItems;
 @property (strong, nonatomic) RMNewsItem* currentItem;
 @property (assign, nonatomic) RMParseState state;
 @property (strong, nonatomic) NSDateFormatter* dateFormatter;
-@property (strong, nonatomic) NSOperationQueue* parseQueue;
+@property (strong, nonatomic) NSXMLParser* parser;
 @end
 
+@implementation RMLentaParseOperation
+@synthesize parseError = _parseError;
 
-@implementation RMLentaParser
-
--(instancetype) init
++(instancetype) operationWithParser:(NSXMLParser *)parser completion:(RMParseCompletion)completion
 {
-    self = [super init];
-    if (self) {
-        NSDateFormatter* dateFormatter = [NSDateFormatter new];
-        dateFormatter.dateFormat = @"EEE, dd MM yyyy HH:mm:SS ZZZ";
-        _dateFormatter = dateFormatter;
-        _parseQueue = [NSOperationQueue new];
-        _parseQueue.maxConcurrentOperationCount = 1;
-        _parseQueue.qualityOfService = NSQualityOfServiceBackground;
-    }
-    return self;
+    RMLentaParseOperation* op = [RMLentaParseOperation new];
+    parser.delegate = op;
+    op.parser = parser;
+    NSDateFormatter* dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateFormat = @"EEE, dd MM yyyy HH:mm:SS ZZZ";
+    op.dateFormatter = dateFormatter;
+    op.completion = completion;
+    
+    return op;
 }
 
--(NSOperation*) parseNewsFromXMLParser:(NSXMLParser *)xmlParser completion:(RMParseCompletion)completion
+-(void) start
 {
+    self.isRunning = YES;
     self.state = RMParseStateIdle;
-    self.parsedItems = [NSMutableArray new];
-    self.completion = completion;
-    xmlParser.delegate = self;
-    NSBlockOperation* parseOperation = [NSBlockOperation blockOperationWithBlock:^{
-        [xmlParser parse];
-    }];
-    [self.parseQueue addOperation:parseOperation];
-    return parseOperation;
+    self.operationalParsedItems = [NSMutableArray new];
+    [self.parser parse];
+    
+    [self willChangeValueForKey:@"isFinished"];
+    [self willChangeValueForKey:@"isExecuting"];
+    self.isRunning = NO;
+    [self didChangeValueForKey:@"isFinished"];
+    [self didChangeValueForKey:@"isExecuting"];
 }
 
 
+-(NSArray*) parsedItems
+{
+    return self.operationalParsedItems;
+}
 
 #pragma mark NSXMLParserDelegate
 
@@ -81,19 +84,11 @@
 -(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
     if ([elementName isEqualToString:@"item"]) {
-        [self.parsedItems addObject:self.currentItem];
+        [self.operationalParsedItems addObject:self.currentItem];
         self.currentItem = nil;
     }
 }
 
--(void) parserDidEndDocument:(NSXMLParser *)parser
-{
-    if (self.completion) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-          self.completion(self.parsedItems, nil);
-        });
-    }
-}
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
     if (self.state == RMParseStateTitle){
@@ -123,22 +118,14 @@
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
 {
-    if (self.completion) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.completion(nil, parseError);
-        });
-    }
+    _parseError = parseError;
+    _operationalParsedItems = nil;
 }
 
 - (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError
 {
-    if (self.completion) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.completion(nil, validationError);
-        });
-    }
+    _parseError = validationError;
+    _operationalParsedItems = nil;
 }
 
-
 @end
-
