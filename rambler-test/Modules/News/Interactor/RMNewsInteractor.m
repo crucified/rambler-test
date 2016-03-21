@@ -65,6 +65,5 @@
     else {
         [self.output newsObtainFailed:[NSError badServerResponseError]];
     }
-    
 }
 @end

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		649B9410304EF469C0054797 /* libPods-rambler-testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */; };
+		84A0648A1C9FD503007A6666 /* validGazetaResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 84A064891C9FD503007A6666 /* validGazetaResponse.xml */; };
+		84A0648C1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0648B1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m */; };
+		84A0648E1C9FE1D6007A6666 /* RMLentaParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21291C9EEA9500389E30 /* RMLentaParseOperation.m */; };
+		84A064901C9FE397007A6666 /* RMGazetaParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */; };
+		84A064911C9FE402007A6666 /* RMRemoteXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21141C9EC37C00389E30 /* RMRemoteXMLParseOperation.m */; };
+		84A064941C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */; };
 		921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8321C94418F00658345 /* NSError+CustomErrors.m */; };
 		924770C31C9EF9F000B961C3 /* RMNewsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */; };
 		925D21091C974E4000389E30 /* RMNetworkControllerBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */; };
@@ -64,6 +70,12 @@
 		61564CFD08196BA34F7E65A2 /* Pods-rambler-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test.debug.xcconfig"; sourceTree = "<group>"; };
 		758352B14124EF3D078ED986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6850B346F36CB27317D001 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		84A064891C9FD503007A6666 /* validGazetaResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = validGazetaResponse.xml; sourceTree = "<group>"; };
+		84A0648B1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLentaGazetaParseOperationsTests.m; sourceTree = "<group>"; };
+		84A0648D1C9FE177007A6666 /* RMLentaParseOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMLentaParseOperation_Private.h; sourceTree = "<group>"; };
+		84A0648F1C9FE393007A6666 /* RMGazetaParseOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGazetaParseOperation_Private.h; sourceTree = "<group>"; };
+		84A064921C9FE418007A6666 /* RMRemoteXMLParseOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRemoteXMLParseOperation_Private.h; sourceTree = "<group>"; };
+		84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRemoteXMLParseOperationTests.m; sourceTree = "<group>"; };
 		8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		921EA8311C94418F00658345 /* NSError+CustomErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+CustomErrors.h"; path = "Extensions/NSError+CustomErrors.h"; sourceTree = "<group>"; };
 		921EA8321C94418F00658345 /* NSError+CustomErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+CustomErrors.m"; path = "Extensions/NSError+CustomErrors.m"; sourceTree = "<group>"; };
@@ -207,6 +219,7 @@
 			children = (
 				925D21131C9EC37B00389E30 /* RMRemoteXMLParseOperation.h */,
 				925D21141C9EC37C00389E30 /* RMRemoteXMLParseOperation.m */,
+				84A064921C9FE418007A6666 /* RMRemoteXMLParseOperation_Private.h */,
 			);
 			path = Operation;
 			sourceTree = "<group>";
@@ -217,6 +230,7 @@
 				925D211B1C9ECD9700389E30 /* validLentaResponse.xml */,
 				925D211D1C9ECDF800389E30 /* corruptedLentaResponse.xml */,
 				925D211F1C9ECE1600389E30 /* someJSON.json */,
+				84A064891C9FD503007A6666 /* validGazetaResponse.xml */,
 			);
 			name = "Server Stubs";
 			path = "rambler-testTests";
@@ -300,6 +314,8 @@
 				928A16F61C90A81C0076B5BF /* Info.plist */,
 				925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */,
 				925D21161C9ECADA00389E30 /* RMNewsParserTests.m */,
+				84A0648B1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m */,
+				84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */,
 			);
 			path = "rambler-testTests";
 			sourceTree = "<group>";
@@ -331,6 +347,7 @@
 			children = (
 				925D21281C9EEA9500389E30 /* RMLentaParseOperation.h */,
 				925D21291C9EEA9500389E30 /* RMLentaParseOperation.m */,
+				84A0648D1C9FE177007A6666 /* RMLentaParseOperation_Private.h */,
 			);
 			path = Lenta;
 			sourceTree = "<group>";
@@ -481,6 +498,7 @@
 			children = (
 				92F62ED21C95F1DF004207F9 /* RMGazetaParseOperation.h */,
 				92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */,
+				84A0648F1C9FE393007A6666 /* RMGazetaParseOperation_Private.h */,
 			);
 			path = Gazeta;
 			sourceTree = "<group>";
@@ -616,6 +634,7 @@
 			files = (
 				925D21241C9ED93100389E30 /* validLentaResponse.xml in Resources */,
 				925D211E1C9ECDF800389E30 /* corruptedLentaResponse.xml in Resources */,
+				84A0648A1C9FD503007A6666 /* validGazetaResponse.xml in Resources */,
 				925D21201C9ECE1600389E30 /* someJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -752,6 +771,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				925D21091C974E4000389E30 /* RMNetworkControllerBaseTests.m in Sources */,
+				84A064901C9FE397007A6666 /* RMGazetaParseOperation.m in Sources */,
+				84A0648E1C9FE1D6007A6666 /* RMLentaParseOperation.m in Sources */,
+				84A0648C1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m in Sources */,
+				84A064941C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m in Sources */,
+				84A064911C9FE402007A6666 /* RMRemoteXMLParseOperation.m in Sources */,
 				92EE992C1C947AD300CA3C1B /* RMNewsPresenterTests.m in Sources */,
 				925D21171C9ECADA00389E30 /* RMNewsParserTests.m in Sources */,
 				92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */,

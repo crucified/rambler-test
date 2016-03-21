@@ -12,7 +12,7 @@
 
 @interface RMNetworkControllerBase()
 
-@property (weak, nonatomic) AFHTTPRequestOperationManager* HTTPmanager;
+@property (strong, nonatomic) AFHTTPRequestOperationManager* HTTPmanager;
 @property (strong, nonatomic) NSOperation* currentOperation;
 
 @end

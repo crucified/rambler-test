@@ -8,15 +8,8 @@
 
 #import "RMGazetaParseOperation.h"
 #import "RMNewsItem.h"
-
-@interface RMGazetaParseOperation()<NSXMLParserDelegate>
-@property (strong, nonatomic) NSMutableArray* operationalParsedItems;
-@property (strong, nonatomic) RMNewsItem* currentItem;
-@property (assign, nonatomic) RMParseState state;
-@property (strong, nonatomic) NSDateFormatter* dateFormatter;
-@property (strong, nonatomic) NSXMLParser* parser;
-@end
-
+#import "NSError+CustomErrors.h"
+#import "RMGazetaParseOperation_Private.h"
 
 @implementation RMGazetaParseOperation
 @synthesize parseError = _parseError;
@@ -37,18 +30,29 @@
 
 -(void) start
 {
-    self.isRunning = YES;
-    self.state = RMParseStateIdle;
-    self.operationalParsedItems = [NSMutableArray new];
-    [self.parser parse];
+    if ([self.parser isKindOfClass:[NSXMLParser class]]) {
+        self.isRunning = YES;
+        self.state = RMParseStateIdle;
+        self.operationalParsedItems = [NSMutableArray new];
+        [self.parser parse];
+        [self finishOperation];
+    }
+    else {
+        _parseError = [NSError badServerResponseError];
+        [self finishOperation];
+    }
     
+}
+
+-(void) finishOperation
+{
     [self willChangeValueForKey:@"isFinished"];
     [self willChangeValueForKey:@"isExecuting"];
     self.isRunning = NO;
     [self didChangeValueForKey:@"isFinished"];
     [self didChangeValueForKey:@"isExecuting"];
-}
 
+}
 
 -(NSArray*) parsedItems
 {

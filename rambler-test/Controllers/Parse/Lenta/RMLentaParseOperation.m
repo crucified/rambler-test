@@ -7,15 +7,9 @@
 //
 
 #import "RMLentaParseOperation.h"
+#import "RMLentaParseOperation_Private.h"
 #import "RMNewsItem.h"
-
-@interface RMLentaParseOperation()<NSXMLParserDelegate>
-@property (strong, nonatomic) NSMutableArray* operationalParsedItems;
-@property (strong, nonatomic) RMNewsItem* currentItem;
-@property (assign, nonatomic) RMParseState state;
-@property (strong, nonatomic) NSDateFormatter* dateFormatter;
-@property (strong, nonatomic) NSXMLParser* parser;
-@end
+#import "NSError+CustomErrors.h"
 
 @implementation RMLentaParseOperation
 @synthesize parseError = _parseError;
@@ -35,18 +29,28 @@
 
 -(void) start
 {
-    self.isRunning = YES;
-    self.state = RMParseStateIdle;
-    self.operationalParsedItems = [NSMutableArray new];
-    [self.parser parse];
-    
+    if ([self.parser isKindOfClass:[NSXMLParser class]]) {
+        self.isRunning = YES;
+        self.state = RMParseStateIdle;
+        self.operationalParsedItems = [NSMutableArray new];
+        [self.parser parse];
+        [self finishOperation];
+    }
+    else{
+        _parseError = [NSError badServerResponseError];
+        [self finishOperation];
+    }
+}
+
+
+-(void) finishOperation
+{
     [self willChangeValueForKey:@"isFinished"];
     [self willChangeValueForKey:@"isExecuting"];
     self.isRunning = NO;
     [self didChangeValueForKey:@"isFinished"];
     [self didChangeValueForKey:@"isExecuting"];
 }
-
 
 -(NSArray*) parsedItems
 {
@@ -69,16 +73,10 @@
     else if ([elementName isEqualToString:@"pubDate"]){
         self.state = RMParseStateDate;
     }
-    else if ([elementName isEqualToString:@"enclosure"]) {
-        self.state = RMParseStateImagePath;
-        NSString* imagePath = [attributeDict objectForKey:@"url"];
-        if ([imagePath isKindOfClass:[NSString class]]) {
-            self.currentItem.imagePath = imagePath;
-        }
-    }
     else {
         self.state = RMParseStateIdle;
     }
+    //картиночек вроде как в газете нету :(
 }
 
 -(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
@@ -105,13 +103,13 @@
             self.currentItem.date = date;
         }
     }
-}
-
-- (void)parser:(NSXMLParser *)parser foundCDATA:(NSData *)CDATABlock
-{
-    if (self.state == RMParseStateDescription){
-        NSString* descStr = [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
-        self.currentItem.newsDescription = descStr;
+    else if (self.state == RMParseStateDescription){
+        if (!self.currentItem.newsDescription) {
+            self.currentItem.newsDescription = string;
+        }
+        else {
+            self.currentItem.newsDescription = [self.currentItem.newsDescription stringByAppendingString:string];;
+        }
     }
 }
 

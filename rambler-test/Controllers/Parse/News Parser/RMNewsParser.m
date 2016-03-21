@@ -10,6 +10,7 @@
 #import "RMNewsParser_Private.h"
 #import "RMLentaParseOperation.h"
 #import "RMGazetaParseOperation.h"
+#import "NSError+CustomErrors.h"
 
 @implementation RMNewsParser
 
@@ -38,6 +39,9 @@
                     completion:(RMParseCompletion)completion
 {
     if (![xmlParser isKindOfClass:[NSXMLParser class]]){
+        if (completion) {
+            completion(nil, [NSError badServerResponseError]);
+        }
         return;
     }
 
@@ -58,6 +62,9 @@
     if (op) {
         [op addObserver:self forKeyPath:@"isFinished" options:NSKeyValueObservingOptionNew context:nil];
         [self.parseQueue addOperation:op];
+    }
+    else {
+        completion(nil, [NSError badServerResponseError]);
     }
 }
 

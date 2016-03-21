@@ -7,18 +7,7 @@
 //
 
 #import "RMRemoteXMLParseOperation.h"
-
-@interface RMRemoteXMLParseOperation()
-
-@property (strong, nonatomic) id<RMNetworkControllerInterface> loader;
-@property (strong, nonatomic) id<RMNewsParserInterface> parser;
-
-@property (assign, nonatomic) BOOL isRunning;
-@property (copy, nonatomic) RMNewsDownloadCompletionHandler completion;
-@property (strong, nonatomic) NSString* path;
-@property (strong, nonatomic) NSDictionary* params;
-@property (assign, nonatomic) RMParseSourceType sourceType;
-@end
+#import "RMRemoteXMLParseOperation_Private.h"
 
 @implementation RMRemoteXMLParseOperation
 
