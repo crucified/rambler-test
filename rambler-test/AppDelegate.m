@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "AFNetworkActivityLogger.h"
+#import "RMNewsAssembly.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
+
+    
+    UIWindow* window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    window.backgroundColor = [UIColor whiteColor];
+    
+    UIViewController* vc = [RMNewsAssembly configureNewsModule];
+    window.rootViewController = vc;
+    [window makeKeyAndVisible];
+    
+    self.window = window;    
+    
     return YES;
 }
 

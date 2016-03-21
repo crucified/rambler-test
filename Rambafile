@@ -1,0 +1,36 @@
+### Headers settings
+company: Denis
+
+### Xcode project settings
+project_name: rambler-test
+xcodeproj_path: rambler-test.xcodeproj
+prefix: RM
+
+### Code generation settings section
+# The main project target name
+project_target: rambler-test
+
+# The file path for new modules
+project_file_path: ./rambler-test/Modules/
+
+# The Xcode group path to new modules
+project_group_path: ./rambler-test/Modules/
+
+### Tests generation settings section
+# The tests target name
+test_target: rambler-testTests
+
+# The file path for new tests
+test_file_path: ./rambler-testTests/
+
+# The Xcode group path to new tests
+test_group_path: ./rambler-testTests/
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: rviper_controller, local: './rviper_controller'}
+#- {name: rviper_controller, git: 'https://github.com/igrekde/rviper_controller'}
+#- {name: catalog_template_name}

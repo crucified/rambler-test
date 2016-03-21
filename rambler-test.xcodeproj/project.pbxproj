@@ -7,14 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		649B9410304EF469C0054797 /* libPods-rambler-testTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */; };
+		84A0648A1C9FD503007A6666 /* validGazetaResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 84A064891C9FD503007A6666 /* validGazetaResponse.xml */; };
+		84A0648C1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0648B1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m */; };
+		84A0648E1C9FE1D6007A6666 /* RMLentaParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21291C9EEA9500389E30 /* RMLentaParseOperation.m */; };
+		84A064901C9FE397007A6666 /* RMGazetaParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */; };
+		84A064911C9FE402007A6666 /* RMRemoteXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21141C9EC37C00389E30 /* RMRemoteXMLParseOperation.m */; };
+		84A064941C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */; };
+		84A0649C1CA00270007A6666 /* RMAsynchronousImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */; };
+		84A0649E1CA004F5007A6666 /* RMAsyncImageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */; };
+		84A0649F1CA005B4007A6666 /* RMAsynchronousImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */; };
+		921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8321C94418F00658345 /* NSError+CustomErrors.m */; };
+		924770C31C9EF9F000B961C3 /* RMNewsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */; };
+		925D21091C974E4000389E30 /* RMNetworkControllerBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */; };
+		925D21111C9EC34E00389E30 /* RMNetworkControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D210E1C9EC34E00389E30 /* RMNetworkControllerBase.m */; };
+		925D21151C9EC37C00389E30 /* RMRemoteXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21141C9EC37C00389E30 /* RMRemoteXMLParseOperation.m */; };
+		925D21171C9ECADA00389E30 /* RMNewsParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21161C9ECADA00389E30 /* RMNewsParserTests.m */; };
+		925D211E1C9ECDF800389E30 /* corruptedLentaResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 925D211D1C9ECDF800389E30 /* corruptedLentaResponse.xml */; };
+		925D21201C9ECE1600389E30 /* someJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 925D211F1C9ECE1600389E30 /* someJSON.json */; };
+		925D21241C9ED93100389E30 /* validLentaResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = 925D211B1C9ECD9700389E30 /* validLentaResponse.xml */; };
+		925D212A1C9EEA9500389E30 /* RMLentaParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21291C9EEA9500389E30 /* RMLentaParseOperation.m */; };
+		925D21361C9EF0EE00389E30 /* RMParseOperationBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21351C9EF0EE00389E30 /* RMParseOperationBase.m */; };
+		925D21401C9EF30A00389E30 /* RMNewsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D213D1C9EF30A00389E30 /* RMNewsParser.m */; };
 		928A16DC1C90A81C0076B5BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16DB1C90A81C0076B5BF /* main.m */; };
 		928A16DF1C90A81C0076B5BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16DE1C90A81C0076B5BF /* AppDelegate.m */; };
-		928A16E21C90A81C0076B5BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16E11C90A81C0076B5BF /* ViewController.m */; };
 		928A16E51C90A81C0076B5BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928A16E31C90A81C0076B5BF /* Main.storyboard */; };
 		928A16E71C90A81C0076B5BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928A16E61C90A81C0076B5BF /* Assets.xcassets */; };
 		928A16EA1C90A81C0076B5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928A16E81C90A81C0076B5BF /* LaunchScreen.storyboard */; };
-		928A16F51C90A81C0076B5BF /* rambler_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16F41C90A81C0076B5BF /* rambler_testTests.m */; };
 		928A17001C90A81C0076B5BF /* rambler_testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 928A16FF1C90A81C0076B5BF /* rambler_testUITests.m */; };
+		92EE98D61C944B5900CA3C1B /* RMNewsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98D51C944B5900CA3C1B /* RMNewsItem.m */; };
+		92EE98E31C94623F00CA3C1B /* RMNewsControllerLenta.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE98E21C94623F00CA3C1B /* RMNewsControllerLenta.m */; };
+		92EE99191C946B4300CA3C1B /* RMNewsAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99061C946B4300CA3C1B /* RMNewsAssembly.m */; };
+		92EE991A1C946B4300CA3C1B /* RMNewsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */; };
+		92EE991B1C946B4300CA3C1B /* RMNewsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE990F1C946B4300CA3C1B /* RMNewsPresenter.m */; };
+		92EE991D1C946B4300CA3C1B /* RMNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99161C946B4300CA3C1B /* RMNewsViewController.m */; };
+		92EE992B1C947AD300CA3C1B /* RMNewsInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99231C947AD300CA3C1B /* RMNewsInteractorTests.m */; };
+		92EE992C1C947AD300CA3C1B /* RMNewsPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99251C947AD300CA3C1B /* RMNewsPresenterTests.m */; };
+		92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */; };
+		92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */; };
+		92F62EBC1C95D88B004207F9 /* RMNewsControllerGazeta.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62EBB1C95D88B004207F9 /* RMNewsControllerGazeta.m */; };
+		92F62ED41C95F1DF004207F9 /* RMGazetaParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */; };
+		FA44E6E413EE4A4D769B2187 /* libPods-rambler-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A00B666702363D525D7B6B /* libPods-rambler-test.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +68,88 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BA432D77C2E8D779366B9BC /* Pods-rambler-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C5203598FDE02325A1F6ADF /* Pods-rambler-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test.release.xcconfig"; sourceTree = "<group>"; };
+		61564CFD08196BA34F7E65A2 /* Pods-rambler-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test.debug.xcconfig"; sourceTree = "<group>"; };
+		758352B14124EF3D078ED986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6850B346F36CB27317D001 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		84A064891C9FD503007A6666 /* validGazetaResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = validGazetaResponse.xml; sourceTree = "<group>"; };
+		84A0648B1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLentaGazetaParseOperationsTests.m; sourceTree = "<group>"; };
+		84A0648D1C9FE177007A6666 /* RMLentaParseOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMLentaParseOperation_Private.h; sourceTree = "<group>"; };
+		84A0648F1C9FE393007A6666 /* RMGazetaParseOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGazetaParseOperation_Private.h; sourceTree = "<group>"; };
+		84A064921C9FE418007A6666 /* RMRemoteXMLParseOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRemoteXMLParseOperation_Private.h; sourceTree = "<group>"; };
+		84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRemoteXMLParseOperationTests.m; sourceTree = "<group>"; };
+		84A0649A1CA00270007A6666 /* RMAsynchronousImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMAsynchronousImageView.h; path = "Image View/RMAsynchronousImageView.h"; sourceTree = "<group>"; };
+		84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMAsynchronousImageView.m; path = "Image View/RMAsynchronousImageView.m"; sourceTree = "<group>"; };
+		84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMAsyncImageViewTests.m; sourceTree = "<group>"; };
+		84A064A11CA00C6F007A6666 /* RMAsynchronousImageView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMAsynchronousImageView_Private.h; path = "Image View/RMAsynchronousImageView_Private.h"; sourceTree = "<group>"; };
+		8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		921EA8311C94418F00658345 /* NSError+CustomErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+CustomErrors.h"; path = "Extensions/NSError+CustomErrors.h"; sourceTree = "<group>"; };
+		921EA8321C94418F00658345 /* NSError+CustomErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+CustomErrors.m"; path = "Extensions/NSError+CustomErrors.m"; sourceTree = "<group>"; };
+		921EA8371C9445FF00658345 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		924770C21C9EF93500B961C3 /* RMNewsInteractor_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsInteractor_Private.h; sourceTree = "<group>"; };
+		925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNetworkControllerBaseTests.m; sourceTree = "<group>"; };
+		925D210D1C9EC34E00389E30 /* RMNetworkControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkControllerBase.h; sourceTree = "<group>"; };
+		925D210E1C9EC34E00389E30 /* RMNetworkControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNetworkControllerBase.m; sourceTree = "<group>"; };
+		925D210F1C9EC34E00389E30 /* RMNetworkControllerBase_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkControllerBase_Private.h; sourceTree = "<group>"; };
+		925D21101C9EC34E00389E30 /* RMNetworkControllerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNetworkControllerInterface.h; sourceTree = "<group>"; };
+		925D21131C9EC37B00389E30 /* RMRemoteXMLParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRemoteXMLParseOperation.h; sourceTree = "<group>"; };
+		925D21141C9EC37C00389E30 /* RMRemoteXMLParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRemoteXMLParseOperation.m; sourceTree = "<group>"; };
+		925D21161C9ECADA00389E30 /* RMNewsParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsParserTests.m; sourceTree = "<group>"; };
+		925D211B1C9ECD9700389E30 /* validLentaResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = validLentaResponse.xml; sourceTree = "<group>"; };
+		925D211D1C9ECDF800389E30 /* corruptedLentaResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = corruptedLentaResponse.xml; sourceTree = "<group>"; };
+		925D211F1C9ECE1600389E30 /* someJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = someJSON.json; sourceTree = "<group>"; };
+		925D21281C9EEA9500389E30 /* RMLentaParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMLentaParseOperation.h; sourceTree = "<group>"; };
+		925D21291C9EEA9500389E30 /* RMLentaParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLentaParseOperation.m; sourceTree = "<group>"; };
+		925D212B1C9EEAB000389E30 /* RMParseOperationCommonTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMParseOperationCommonTypes.h; sourceTree = "<group>"; };
+		925D21341C9EF0EE00389E30 /* RMParseOperationBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMParseOperationBase.h; sourceTree = "<group>"; };
+		925D21351C9EF0EE00389E30 /* RMParseOperationBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMParseOperationBase.m; sourceTree = "<group>"; };
+		925D213C1C9EF30A00389E30 /* RMNewsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsParser.h; sourceTree = "<group>"; };
+		925D213D1C9EF30A00389E30 /* RMNewsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsParser.m; sourceTree = "<group>"; };
+		925D213E1C9EF30A00389E30 /* RMNewsParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsParser_Private.h; sourceTree = "<group>"; };
+		925D213F1C9EF30A00389E30 /* RMNewsParserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsParserInterface.h; sourceTree = "<group>"; };
 		928A16D71C90A81C0076B5BF /* rambler-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rambler-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928A16DB1C90A81C0076B5BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		928A16DD1C90A81C0076B5BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		928A16DE1C90A81C0076B5BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		928A16E01C90A81C0076B5BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		928A16E11C90A81C0076B5BF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		928A16E41C90A81C0076B5BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		928A16E61C90A81C0076B5BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		928A16E91C90A81C0076B5BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		928A16EB1C90A81C0076B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		928A16F01C90A81C0076B5BF /* rambler-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rambler-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		928A16F41C90A81C0076B5BF /* rambler_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rambler_testTests.m; sourceTree = "<group>"; };
 		928A16F61C90A81C0076B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		928A16FB1C90A81C0076B5BF /* rambler-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rambler-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928A16FF1C90A81C0076B5BF /* rambler_testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rambler_testUITests.m; sourceTree = "<group>"; };
 		928A17011C90A81C0076B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92EE98D41C944B5900CA3C1B /* RMNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsItem.h; sourceTree = "<group>"; };
+		92EE98D51C944B5900CA3C1B /* RMNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsItem.m; sourceTree = "<group>"; };
+		92EE98E11C94623F00CA3C1B /* RMNewsControllerLenta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsControllerLenta.h; sourceTree = "<group>"; };
+		92EE98E21C94623F00CA3C1B /* RMNewsControllerLenta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsControllerLenta.m; sourceTree = "<group>"; };
+		92EE99051C946B4300CA3C1B /* RMNewsAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsAssembly.h; sourceTree = "<group>"; };
+		92EE99061C946B4300CA3C1B /* RMNewsAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsAssembly.m; sourceTree = "<group>"; };
+		92EE99081C946B4300CA3C1B /* RMNewsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsInteractor.h; sourceTree = "<group>"; };
+		92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsInteractor.m; sourceTree = "<group>"; };
+		92EE990A1C946B4300CA3C1B /* RMNewsInteractorInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsInteractorInput.h; sourceTree = "<group>"; };
+		92EE990B1C946B4300CA3C1B /* RMNewsInteractorOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsInteractorOutput.h; sourceTree = "<group>"; };
+		92EE990E1C946B4300CA3C1B /* RMNewsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsPresenter.h; sourceTree = "<group>"; };
+		92EE990F1C946B4300CA3C1B /* RMNewsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsPresenter.m; sourceTree = "<group>"; };
+		92EE99151C946B4300CA3C1B /* RMNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsViewController.h; sourceTree = "<group>"; };
+		92EE99161C946B4300CA3C1B /* RMNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsViewController.m; sourceTree = "<group>"; };
+		92EE99171C946B4300CA3C1B /* RMNewsViewInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsViewInput.h; sourceTree = "<group>"; };
+		92EE99181C946B4300CA3C1B /* RMNewsViewOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsViewOutput.h; sourceTree = "<group>"; };
+		92EE99231C947AD300CA3C1B /* RMNewsInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsInteractorTests.m; sourceTree = "<group>"; };
+		92EE99251C947AD300CA3C1B /* RMNewsPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsPresenterTests.m; sourceTree = "<group>"; };
+		92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsViewControllerTests.m; sourceTree = "<group>"; };
+		92F62EB41C94B241004207F9 /* RMNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsTableViewCell.h; sourceTree = "<group>"; };
+		92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsTableViewCell.m; sourceTree = "<group>"; };
+		92F62EBA1C95D88B004207F9 /* RMNewsControllerGazeta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMNewsControllerGazeta.h; path = Gazeta/RMNewsControllerGazeta.h; sourceTree = "<group>"; };
+		92F62EBB1C95D88B004207F9 /* RMNewsControllerGazeta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMNewsControllerGazeta.m; path = Gazeta/RMNewsControllerGazeta.m; sourceTree = "<group>"; };
+		92F62EBD1C95D8CF004207F9 /* RMNewsControllerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMNewsControllerInterface.h; sourceTree = "<group>"; };
+		92F62ED21C95F1DF004207F9 /* RMGazetaParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGazetaParseOperation.h; sourceTree = "<group>"; };
+		92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGazetaParseOperation.m; sourceTree = "<group>"; };
+		B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rambler-testTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B80C794D21CDD2E44327188E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F7A00B666702363D525D7B6B /* libPods-rambler-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rambler-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA44E6E413EE4A4D769B2187 /* libPods-rambler-test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649B9410304EF469C0054797 /* libPods-rambler-testTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +179,102 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CBB93DEA09BDF71705C7F18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B80C794D21CDD2E44327188E /* Pods.debug.xcconfig */,
+				7F6850B346F36CB27317D001 /* Pods.release.xcconfig */,
+				61564CFD08196BA34F7E65A2 /* Pods-rambler-test.debug.xcconfig */,
+				5C5203598FDE02325A1F6ADF /* Pods-rambler-test.release.xcconfig */,
+				3BA432D77C2E8D779366B9BC /* Pods-rambler-testTests.debug.xcconfig */,
+				8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84A064991CA0020F007A6666 /* Image View */ = {
+			isa = PBXGroup;
+			children = (
+				84A0649A1CA00270007A6666 /* RMAsynchronousImageView.h */,
+				84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */,
+				84A064A11CA00C6F007A6666 /* RMAsynchronousImageView_Private.h */,
+			);
+			name = "Image View";
+			sourceTree = "<group>";
+		};
+		921EA82A1C9437D100658345 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				925D21121C9EC37B00389E30 /* Operation */,
+				925D210C1C9EC34E00389E30 /* Controller */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		921EA8301C94415F00658345 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				921EA8311C94418F00658345 /* NSError+CustomErrors.h */,
+				921EA8321C94418F00658345 /* NSError+CustomErrors.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		925D210C1C9EC34E00389E30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				925D210D1C9EC34E00389E30 /* RMNetworkControllerBase.h */,
+				925D210E1C9EC34E00389E30 /* RMNetworkControllerBase.m */,
+				925D210F1C9EC34E00389E30 /* RMNetworkControllerBase_Private.h */,
+				925D21101C9EC34E00389E30 /* RMNetworkControllerInterface.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		925D21121C9EC37B00389E30 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				925D21131C9EC37B00389E30 /* RMRemoteXMLParseOperation.h */,
+				925D21141C9EC37C00389E30 /* RMRemoteXMLParseOperation.m */,
+				84A064921C9FE418007A6666 /* RMRemoteXMLParseOperation_Private.h */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		925D211A1C9ECD6300389E30 /* Server Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				925D211B1C9ECD9700389E30 /* validLentaResponse.xml */,
+				925D211D1C9ECDF800389E30 /* corruptedLentaResponse.xml */,
+				925D211F1C9ECE1600389E30 /* someJSON.json */,
+				84A064891C9FD503007A6666 /* validGazetaResponse.xml */,
+			);
+			name = "Server Stubs";
+			path = "rambler-testTests";
+			sourceTree = SOURCE_ROOT;
+		};
+		925D213B1C9EF30A00389E30 /* News Parser */ = {
+			isa = PBXGroup;
+			children = (
+				925D213C1C9EF30A00389E30 /* RMNewsParser.h */,
+				925D213D1C9EF30A00389E30 /* RMNewsParser.m */,
+				925D213E1C9EF30A00389E30 /* RMNewsParser_Private.h */,
+				925D213F1C9EF30A00389E30 /* RMNewsParserInterface.h */,
+			);
+			path = "News Parser";
+			sourceTree = "<group>";
+		};
+		927A95A81C90B295002D9A0A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84A064991CA0020F007A6666 /* Image View */,
+				921EA82A1C9437D100658345 /* Network */,
+				92EE98DA1C94607700CA3C1B /* News */,
+				92EE98CB1C944B2C00CA3C1B /* Parse */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		928A16CE1C90A81C0076B5BF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +282,8 @@
 				928A16F31C90A81C0076B5BF /* rambler-testTests */,
 				928A16FE1C90A81C0076B5BF /* rambler-testUITests */,
 				928A16D81C90A81C0076B5BF /* Products */,
+				5CBB93DEA09BDF71705C7F18 /* Pods */,
+				BCEB1B099DF6556C8A7FACA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +300,12 @@
 		928A16D91C90A81C0076B5BF /* rambler-test */ = {
 			isa = PBXGroup;
 			children = (
+				92EE98E61C94637F00CA3C1B /* Modules */,
+				92EE98D31C944B5900CA3C1B /* Model */,
+				921EA8301C94415F00658345 /* Extensions */,
+				927A95A81C90B295002D9A0A /* Controllers */,
 				928A16DD1C90A81C0076B5BF /* AppDelegate.h */,
 				928A16DE1C90A81C0076B5BF /* AppDelegate.m */,
-				928A16E01C90A81C0076B5BF /* ViewController.h */,
-				928A16E11C90A81C0076B5BF /* ViewController.m */,
 				928A16E31C90A81C0076B5BF /* Main.storyboard */,
 				928A16E61C90A81C0076B5BF /* Assets.xcassets */,
 				928A16E81C90A81C0076B5BF /* LaunchScreen.storyboard */,
@@ -118,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				928A16DB1C90A81C0076B5BF /* main.m */,
+				921EA8371C9445FF00658345 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -125,8 +327,14 @@
 		928A16F31C90A81C0076B5BF /* rambler-testTests */ = {
 			isa = PBXGroup;
 			children = (
-				928A16F41C90A81C0076B5BF /* rambler_testTests.m */,
+				925D211A1C9ECD6300389E30 /* Server Stubs */,
+				92EE991E1C947AD300CA3C1B /* News */,
 				928A16F61C90A81C0076B5BF /* Info.plist */,
+				925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */,
+				925D21161C9ECADA00389E30 /* RMNewsParserTests.m */,
+				84A0648B1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m */,
+				84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */,
+				84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */,
 			);
 			path = "rambler-testTests";
 			sourceTree = "<group>";
@@ -140,6 +348,190 @@
 			path = "rambler-testUITests";
 			sourceTree = "<group>";
 		};
+		92EE98CB1C944B2C00CA3C1B /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				925D213B1C9EF30A00389E30 /* News Parser */,
+				92F62ED11C95F1DF004207F9 /* Gazeta */,
+				92EE98CC1C944B2C00CA3C1B /* Lenta */,
+				925D212B1C9EEAB000389E30 /* RMParseOperationCommonTypes.h */,
+				925D21341C9EF0EE00389E30 /* RMParseOperationBase.h */,
+				925D21351C9EF0EE00389E30 /* RMParseOperationBase.m */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		92EE98CC1C944B2C00CA3C1B /* Lenta */ = {
+			isa = PBXGroup;
+			children = (
+				925D21281C9EEA9500389E30 /* RMLentaParseOperation.h */,
+				925D21291C9EEA9500389E30 /* RMLentaParseOperation.m */,
+				84A0648D1C9FE177007A6666 /* RMLentaParseOperation_Private.h */,
+			);
+			path = Lenta;
+			sourceTree = "<group>";
+		};
+		92EE98D31C944B5900CA3C1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92EE98D41C944B5900CA3C1B /* RMNewsItem.h */,
+				92EE98D51C944B5900CA3C1B /* RMNewsItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92EE98DA1C94607700CA3C1B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				92F62EB91C95D858004207F9 /* Gazeta */,
+				92EE98E01C94623F00CA3C1B /* Lenta */,
+				92F62EBD1C95D8CF004207F9 /* RMNewsControllerInterface.h */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		92EE98E01C94623F00CA3C1B /* Lenta */ = {
+			isa = PBXGroup;
+			children = (
+				92EE98E11C94623F00CA3C1B /* RMNewsControllerLenta.h */,
+				92EE98E21C94623F00CA3C1B /* RMNewsControllerLenta.m */,
+			);
+			path = Lenta;
+			sourceTree = "<group>";
+		};
+		92EE98E61C94637F00CA3C1B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99031C946B4300CA3C1B /* News */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		92EE99031C946B4300CA3C1B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99041C946B4300CA3C1B /* Assembly */,
+				92EE99071C946B4300CA3C1B /* Interactor */,
+				92EE990C1C946B4300CA3C1B /* Presenter */,
+				92EE99141C946B4300CA3C1B /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		92EE99041C946B4300CA3C1B /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99051C946B4300CA3C1B /* RMNewsAssembly.h */,
+				92EE99061C946B4300CA3C1B /* RMNewsAssembly.m */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		92EE99071C946B4300CA3C1B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99081C946B4300CA3C1B /* RMNewsInteractor.h */,
+				92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */,
+				92EE990A1C946B4300CA3C1B /* RMNewsInteractorInput.h */,
+				92EE990B1C946B4300CA3C1B /* RMNewsInteractorOutput.h */,
+				924770C21C9EF93500B961C3 /* RMNewsInteractor_Private.h */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		92EE990C1C946B4300CA3C1B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				92EE990E1C946B4300CA3C1B /* RMNewsPresenter.h */,
+				92EE990F1C946B4300CA3C1B /* RMNewsPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		92EE99141C946B4300CA3C1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92F62EB31C94B241004207F9 /* TableViewCell */,
+				92EE99151C946B4300CA3C1B /* RMNewsViewController.h */,
+				92EE99161C946B4300CA3C1B /* RMNewsViewController.m */,
+				92EE99171C946B4300CA3C1B /* RMNewsViewInput.h */,
+				92EE99181C946B4300CA3C1B /* RMNewsViewOutput.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92EE991E1C947AD300CA3C1B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99221C947AD300CA3C1B /* Interactor */,
+				92EE99241C947AD300CA3C1B /* Presenter */,
+				92EE99281C947AD300CA3C1B /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		92EE99221C947AD300CA3C1B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99231C947AD300CA3C1B /* RMNewsInteractorTests.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		92EE99241C947AD300CA3C1B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99251C947AD300CA3C1B /* RMNewsPresenterTests.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		92EE99281C947AD300CA3C1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92EE99291C947AD300CA3C1B /* RMNewsViewControllerTests.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92F62EB31C94B241004207F9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				92F62EB41C94B241004207F9 /* RMNewsTableViewCell.h */,
+				92F62EB51C94B241004207F9 /* RMNewsTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		92F62EB91C95D858004207F9 /* Gazeta */ = {
+			isa = PBXGroup;
+			children = (
+				92F62EBA1C95D88B004207F9 /* RMNewsControllerGazeta.h */,
+				92F62EBB1C95D88B004207F9 /* RMNewsControllerGazeta.m */,
+			);
+			name = Gazeta;
+			sourceTree = "<group>";
+		};
+		92F62ED11C95F1DF004207F9 /* Gazeta */ = {
+			isa = PBXGroup;
+			children = (
+				92F62ED21C95F1DF004207F9 /* RMGazetaParseOperation.h */,
+				92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */,
+				84A0648F1C9FE393007A6666 /* RMGazetaParseOperation_Private.h */,
+			);
+			path = Gazeta;
+			sourceTree = "<group>";
+		};
+		BCEB1B099DF6556C8A7FACA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				758352B14124EF3D078ED986 /* libPods.a */,
+				F7A00B666702363D525D7B6B /* libPods-rambler-test.a */,
+				B0FEA4ABDE7AE2DEB02E061A /* libPods-rambler-testTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +539,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 928A17041C90A81C0076B5BF /* Build configuration list for PBXNativeTarget "rambler-test" */;
 			buildPhases = (
+				9A96E160B5C7BA796FFB31E7 /* Check Pods Manifest.lock */,
 				928A16D31C90A81C0076B5BF /* Sources */,
 				928A16D41C90A81C0076B5BF /* Frameworks */,
 				928A16D51C90A81C0076B5BF /* Resources */,
+				5F3035E07CEA93BB9B6C6960 /* Embed Pods Frameworks */,
+				08A269A8D94BA337BB4DCE26 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +559,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 928A17071C90A81C0076B5BF /* Build configuration list for PBXNativeTarget "rambler-testTests" */;
 			buildPhases = (
+				A3D272BDABE0AA706049A04D /* Check Pods Manifest.lock */,
 				928A16EC1C90A81C0076B5BF /* Sources */,
 				928A16ED1C90A81C0076B5BF /* Frameworks */,
 				928A16EE1C90A81C0076B5BF /* Resources */,
+				B84907359FA7E27C6BB32321 /* Embed Pods Frameworks */,
+				5E716A4FED74BE0F7030E0E7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +651,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925D21241C9ED93100389E30 /* validLentaResponse.xml in Resources */,
+				925D211E1C9ECDF800389E30 /* corruptedLentaResponse.xml in Resources */,
+				84A0648A1C9FD503007A6666 /* validGazetaResponse.xml in Resources */,
+				925D21201C9ECE1600389E30 /* someJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +667,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08A269A8D94BA337BB4DCE26 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E716A4FED74BE0F7030E0E7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F3035E07CEA93BB9B6C6960 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-test/Pods-rambler-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A96E160B5C7BA796FFB31E7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3D272BDABE0AA706049A04D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B84907359FA7E27C6BB32321 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		928A16D31C90A81C0076B5BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				928A16E21C90A81C0076B5BF /* ViewController.m in Sources */,
+				925D212A1C9EEA9500389E30 /* RMLentaParseOperation.m in Sources */,
+				92EE98D61C944B5900CA3C1B /* RMNewsItem.m in Sources */,
+				92EE98E31C94623F00CA3C1B /* RMNewsControllerLenta.m in Sources */,
+				92F62ED41C95F1DF004207F9 /* RMGazetaParseOperation.m in Sources */,
+				92EE99191C946B4300CA3C1B /* RMNewsAssembly.m in Sources */,
+				925D21151C9EC37C00389E30 /* RMRemoteXMLParseOperation.m in Sources */,
+				92F62EBC1C95D88B004207F9 /* RMNewsControllerGazeta.m in Sources */,
+				92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */,
+				925D21401C9EF30A00389E30 /* RMNewsParser.m in Sources */,
+				92EE991D1C946B4300CA3C1B /* RMNewsViewController.m in Sources */,
+				92EE991B1C946B4300CA3C1B /* RMNewsPresenter.m in Sources */,
 				928A16DF1C90A81C0076B5BF /* AppDelegate.m in Sources */,
 				928A16DC1C90A81C0076B5BF /* main.m in Sources */,
+				84A0649C1CA00270007A6666 /* RMAsynchronousImageView.m in Sources */,
+				925D21111C9EC34E00389E30 /* RMNetworkControllerBase.m in Sources */,
+				925D21361C9EF0EE00389E30 /* RMParseOperationBase.m in Sources */,
+				921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */,
+				92EE991A1C946B4300CA3C1B /* RMNewsInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +790,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				928A16F51C90A81C0076B5BF /* rambler_testTests.m in Sources */,
+				84A0649E1CA004F5007A6666 /* RMAsyncImageViewTests.m in Sources */,
+				925D21091C974E4000389E30 /* RMNetworkControllerBaseTests.m in Sources */,
+				84A064901C9FE397007A6666 /* RMGazetaParseOperation.m in Sources */,
+				84A0648E1C9FE1D6007A6666 /* RMLentaParseOperation.m in Sources */,
+				84A0648C1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m in Sources */,
+				84A064941C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m in Sources */,
+				84A064911C9FE402007A6666 /* RMRemoteXMLParseOperation.m in Sources */,
+				92EE992C1C947AD300CA3C1B /* RMNewsPresenterTests.m in Sources */,
+				925D21171C9ECADA00389E30 /* RMNewsParserTests.m in Sources */,
+				92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */,
+				84A0649F1CA005B4007A6666 /* RMAsynchronousImageView.m in Sources */,
+				924770C31C9EF9F000B961C3 /* RMNewsInteractor.m in Sources */,
+				92EE992B1C947AD300CA3C1B /* RMNewsInteractorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +875,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rambler-test/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -363,7 +887,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -395,13 +919,15 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rambler-test/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -411,6 +937,7 @@
 		};
 		928A17051C90A81C0076B5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61564CFD08196BA34F7E65A2 /* Pods-rambler-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "rambler-test/Info.plist";
@@ -422,6 +949,7 @@
 		};
 		928A17061C90A81C0076B5BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C5203598FDE02325A1F6ADF /* Pods-rambler-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "rambler-test/Info.plist";
@@ -433,6 +961,7 @@
 		};
 		928A17081C90A81C0076B5BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BA432D77C2E8D779366B9BC /* Pods-rambler-testTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "rambler-testTests/Info.plist";
@@ -445,6 +974,7 @@
 		};
 		928A17091C90A81C0076B5BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "rambler-testTests/Info.plist";
@@ -498,6 +1028,7 @@
 				928A17061C90A81C0076B5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		928A17071C90A81C0076B5BF /* Build configuration list for PBXNativeTarget "rambler-testTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +1037,7 @@
 				928A17091C90A81C0076B5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		928A170A1C90A81C0076B5BF /* Build configuration list for PBXNativeTarget "rambler-testUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +1046,7 @@
 				928A170C1C90A81C0076B5BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
