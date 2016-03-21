@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef enum : NSUInteger {
+    RMParseSourceTypeLenta,
+    RMParseSourceTypeGazeta,
+} RMParseSourceType;
 
 @interface RMNewsItem : NSObject
 
@@ -14,5 +18,6 @@
 @property (strong, nonatomic) NSString* newsDescription;
 @property (strong, nonatomic) NSString* imagePath;
 @property (strong, nonatomic) NSDate* date;
+@property (assign, nonatomic) RMParseSourceType sourceType;
 
 @end

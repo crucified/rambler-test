@@ -12,11 +12,6 @@
 #import "RMNewsItem.h"
 #import "RMParseOperationBase.h"
 
-typedef enum : NSUInteger {
-    RMParseSourceTypeLenta,
-    RMParseSourceTypeGazeta,
-} RMParseSourceType;
-
 @protocol RMNewsParserInterface <NSObject>
 
 -(void) parseNewsFromXMLParser:(NSXMLParser*)xmlParser

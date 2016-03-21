@@ -17,6 +17,8 @@ static CGFloat const RMBriefCellHeight = 106;
 @property (weak, nonatomic) IBOutlet RMAsynchronousImageView* newsImageView;
 @property (weak, nonatomic) IBOutlet UILabel* titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel* descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel* sourceLabel;
+
 @property (assign, nonatomic) BOOL isBrief;
 @end
 
@@ -31,6 +33,7 @@ static CGFloat const RMBriefCellHeight = 106;
 - (void)awakeFromNib {
     self.titleLabel.text = @"";
     self.descriptionLabel.text = @"";
+    self.sourceLabel.text = @"";
     self.isBrief = YES;
 }
 
@@ -50,6 +53,15 @@ static CGFloat const RMBriefCellHeight = 106;
     self.titleLabel.text = news.title;
     self.descriptionLabel.text = news.newsDescription;
     [self.newsImageView setAsynchronousImageWithPath:news.imagePath];
+    if (news.sourceType == RMParseSourceTypeLenta) {
+        self.sourceLabel.text = @"Lenta.ru";
+    }
+    else if (news.sourceType == RMParseSourceTypeGazeta){
+        self.sourceLabel.text = @"Gazeta.ru";
+    }
+    else {
+        self.sourceLabel.text = @"";
+   }
 }
 
 -(void) expandView

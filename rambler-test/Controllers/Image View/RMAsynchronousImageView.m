@@ -68,6 +68,7 @@
 -(void) setAsynchronousImageWithPath:(NSString*)imagePath
 {
     if (![imagePath isKindOfClass:[NSString class]]) {
+        [self setImage:nil];
         return;
     }
     [self cancelImageRequestOperation];

@@ -88,6 +88,7 @@
 -(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
     if ([elementName isEqualToString:@"item"]) {
+        self.currentItem.sourceType = RMParseSourceTypeLenta;
         [self.operationalParsedItems addObject:self.currentItem];
         self.currentItem = nil;
     }
