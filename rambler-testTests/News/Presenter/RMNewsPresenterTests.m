@@ -13,6 +13,7 @@
 
 #import "RMNewsViewInput.h"
 #import "RMNewsInteractorInput.h"
+#import "RMNewsInteractor.h"
 
 @interface RMNewsPresenterTests : XCTestCase
 
@@ -63,6 +64,27 @@
     OCMVerify([self.mockView setupInitialState]);
 }
 
+
+-(void) testInteractorCallsNewsObtainedMethodWithNonNilArg
+{
+    //given
+    __block BOOL exitFlag = NO;
+    id presenterMock = OCMPartialMock(self.presenter);
+    
+    OCMStub([presenterMock newsObtained:OCMOCK_ANY]).andDo(^(NSInvocation* inv){exitFlag = YES;}).andForwardToRealObject;
+    RMNewsInteractor* realInteractor = [RMNewsInteractor new];
+    realInteractor.output = presenterMock;
+    
+    //when
+    [realInteractor obtainNews];
+
+    do {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:0];
+    } while (!exitFlag);
+    
+    OCMVerify([presenterMock newsObtained:[OCMArg isNotNil]]);
+    
+}
 #pragma mark - Тестирование методов RMNewsInteractorOutput
 
 @end
