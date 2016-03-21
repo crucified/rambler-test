@@ -1,5 +1,4 @@
 //
-//  RMLentaRSSController.h
 //  rambler-test
 //
 //  Created by Denis Kharitonov on 12.03.16.
@@ -7,9 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RMNewsControllerInterface.h"
+#import "RMNewsParserInterface.h"
 
-/// Lenta news class
-@interface RMLentaRSSController : NSObject<RMNewsControllerInterface>
+
+@interface RMNewsParser : NSObject<RMNewsParserInterface>
+
++(instancetype) sharedInstance;
 
 @end

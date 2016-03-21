@@ -6,23 +6,23 @@
 //  Copyright © 2016 dp. All rights reserved.
 //
 
-#import "RMGazetaXMLController.h"
+#import "RMNewsControllerGazeta.h"
 #import "RMRemoteXMLParseOperation.h"
 #import "RMNetworkControllerBase.h"
-#import "RMGazetaParser.h"
+#import "RMNewsParser.h"
 
 static NSString* const RMGazetaNewsPath = @"http://www.gazeta.ru/export/rss/lenta.xml";
 
-@interface RMGazetaXMLController()
+@interface RMNewsControllerGazeta()
 
 @property (strong, nonatomic) id<RMNetworkControllerInterface> networkController;
-@property (strong, nonatomic) id<RMNewsParserInterface> parser;
+@property (weak, nonatomic) id<RMNewsParserInterface> parser;
 @property (strong, nonatomic) NSOperationQueue* operationQueue;
 
 @end
 
 
-@implementation RMGazetaXMLController
+@implementation RMNewsControllerGazeta
 
 -(instancetype) init
 {
@@ -31,7 +31,7 @@ static NSString* const RMGazetaNewsPath = @"http://www.gazeta.ru/export/rss/lent
         _operationQueue = [NSOperationQueue new];
         _operationQueue.qualityOfService = NSQualityOfServiceDefault;
         _networkController = [RMNetworkControllerBase new];
-        _parser = [RMGazetaParser new];
+        _parser = [RMNewsParser sharedInstance];
     }
     return self;
 }
@@ -42,18 +42,20 @@ static NSString* const RMGazetaNewsPath = @"http://www.gazeta.ru/export/rss/lent
                                                                parameters:nil
                                                                    loader:self.networkController
                                                                    parser:_parser
-                                                               completion:^(NSArray *news, NSError *error) {
-                                                                   if (error){
-                                                                       if (completion) {
-                                                                           completion(nil, error);
-                                                                       }
-                                                                   }
-                                                                   else {
-                                                                       if (completion) {
-                                                                           completion(news, error);
-                                                                       }
-                                                                   }
-                                                               }];
+                                                               sourceType:RMParseSourceTypeGazeta
+                                                               completion:^(NSArray *news, NSError *error)
+                              {
+                                  if (error){
+                                      if (completion) {
+                                          completion(nil, error);
+                                      }
+                                  }
+                                  else {
+                                      if (completion) {
+                                          completion(news, error);
+                                      }
+                                  }
+                              }];
     
     [self.operationQueue addOperation:operation];
     

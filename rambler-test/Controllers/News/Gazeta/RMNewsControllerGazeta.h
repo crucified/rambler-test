@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "RMNewsControllerInterface.h"
 
-@interface RMGazetaXMLController : NSObject<RMNewsControllerInterface>
+@interface RMNewsControllerGazeta : NSObject<RMNewsControllerInterface>
 
 @end

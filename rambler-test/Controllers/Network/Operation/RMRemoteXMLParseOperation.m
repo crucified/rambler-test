@@ -7,17 +7,7 @@
 //
 
 #import "RMRemoteXMLParseOperation.h"
-
-@interface RMRemoteXMLParseOperation()
-
-@property (strong, nonatomic) id<RMNetworkControllerInterface> loader;
-@property (strong, nonatomic) id<RMNewsParserInterface> parser;
-
-@property (assign, nonatomic) BOOL isRunning;
-@property (copy, nonatomic) RMNewsDownloadCompletionHandler completion;
-@property (strong, nonatomic) NSString* path;
-@property (strong, nonatomic) NSDictionary* params;
-@end
+#import "RMRemoteXMLParseOperation_Private.h"
 
 @implementation RMRemoteXMLParseOperation
 
@@ -25,6 +15,7 @@
                        parameters:(NSDictionary *)params
                            loader:(id<RMNetworkControllerInterface>)loader
                            parser:(id<RMNewsParserInterface>)parser
+                       sourceType:(RMParseSourceType)parseSourceType
                        completion:(RMNewsDownloadCompletionHandler)completion
 {
     RMRemoteXMLParseOperation* op = [RMRemoteXMLParseOperation new];
@@ -32,7 +23,7 @@
     op.loader = loader;
     op.parser = parser;
     op.completion = [completion copy];
-    
+    op.sourceType = parseSourceType;
     return op;
 }
 
@@ -48,7 +39,10 @@
     self.isRunning = YES;
     __weak typeof(self) weakSelf = self;
     [self.loader performGETRequestWithPath:self.path params:self.params completion:^(NSXMLParser *responseObject, NSError *error) {
-        [weakSelf.parser parseNewsFromXMLParser:responseObject completion:^(NSArray<RMNewsItem *> *items, NSError *error) {
+        [weakSelf.parser parseNewsFromXMLParser:responseObject
+                                     sourceType:self.sourceType
+                                     completion:^(NSArray<RMNewsItem *> *items, NSError *error)
+        {
             [weakSelf willChangeValueForKey:@"isFinished"];
             [weakSelf willChangeValueForKey:@"isExecuting"];
             if (weakSelf.completion) {
@@ -73,6 +67,6 @@
 
 -(BOOL) isExecuting
 {
-    return self.isExecuting;
+    return self.isRunning;
 }
 @end

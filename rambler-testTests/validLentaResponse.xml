@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<language>ru</language>
+<title>Lenta.ru : Новости</title>
+<description>Новости, статьи, фотографии, видео. Семь дней в неделю, 24 часа в сутки</description>
+<link>http://lenta.ru</link>
+<image>
+<url>http://assets.lenta.ru/small_logo.png</url>
+<title>Lenta.ru</title>
+<link>http://lenta.ru</link>
+<width>134</width>
+<height>22</height>
+</image>
+<atom:link rel="self" type="application/rss+xml" href="http://lenta.ru/rss"/>
+<item>
+<guid>http://lenta.ru/news/2016/03/20/istanbul_terror_suspect/</guid>
+<title>В Турции задержали подозреваемых в причастности к теракту в Стамбуле </title>
+<link>http://lenta.ru/news/2016/03/20/istanbul_terror_suspect/</link>
+<description>
+<![CDATA[По подозрению в причастности к теракту в Стамбуле задержали пять человек. Об этом заявил глава МВД Турции Эфкан Ала. По его словам, взрыв совершил смертник, связанный с террористической группировкой «Исламское государство». Ала отметил, что боевик родился в 1992 году в городе Газиантеп.]]>
+</description>
+<pubDate>Sun, 20 Mar 2016 15:14:00 +0300</pubDate>
+<enclosure url="http://icdn.lenta.ru/images/2016/03/20/14/20160320145944376/pic_48b13098ef4e46d0e27ec44a4215c6e0.jpg" length="122294" type="image/jpeg"/>
+<category>Мир</category>
+</item>
+<item>
+<guid>http://lenta.ru/news/2016/03/20/travel/</guid>
+<title>Падение рубля увеличило турпоток в Россию</title>
+<link>http://lenta.ru/news/2016/03/20/travel/</link>
+<description>
+<![CDATA[Глава Ростуризма Олег Сафонов заявил, что благодаря падению курса рубля число иностранных путешественников, посетивших Россию в 2015 году, увеличилось на 13 процентов. По его словам, большинство туристов прибывают в РФ из Китая и стран Юго-Восточной Азии. По европейскому направлению наблюдается падение спроса.]]>
+</description>
+<pubDate>Sun, 20 Mar 2016 15:13:00 +0300</pubDate>
+<enclosure url="http://icdn.lenta.ru/images/2016/03/20/14/20160320145805642/pic_5f423794dbd7039a4af73e75223242a8.jpg" length="42610" type="image/jpeg"/>
+<category>Путешествия</category>
+</item>
+</channel>
+</rss>

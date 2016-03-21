@@ -8,19 +8,10 @@
 
 #import "RMNewsInteractor.h"
 #import "RMNewsInteractorOutput.h"
-#import "RMLentaRSSController.h"
+#import "RMNewsControllerLenta.h"
 #import "NSError+CustomErrors.h"
-#import "RMGazetaXMLController.h"
-
-@interface RMNewsInteractor()
-
-
-@property (strong, nonatomic) RMLentaRSSController* lentaNewsController;
-@property (strong, nonatomic) RMGazetaXMLController* gazetaNewsController;
-@property (strong, nonatomic) NSArray<RMNewsItem*>* lentaNews;
-@property (strong, nonatomic) NSArray<RMNewsItem*>* gazetaNews;
-
-@end
+#import "RMNewsControllerGazeta.h"
+#import "RMNewsInteractor_Private.h"
 
 @implementation RMNewsInteractor
 
@@ -28,8 +19,8 @@
 {
     self = [super init];
     if (self) {
-        _lentaNewsController = [RMLentaRSSController new];
-        _gazetaNewsController = [RMGazetaXMLController new];
+        _lentaNewsController = [RMNewsControllerLenta new];
+        _gazetaNewsController = [RMNewsControllerGazeta new];
     }
     return self;
 }
@@ -39,13 +30,17 @@
 {
     NSOperation* downloadLentaOp = [self.lentaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
         if (!error) {
-            self.lentaNews = news;
+            if ([news isKindOfClass:[NSArray class]]) {
+                self.lentaNews = news;
+            }
         }
     }];
 
     NSOperation* downloadGazetaOp = [self.gazetaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
         if (!error) {
-            self.gazetaNews = news;
+            if ([news isKindOfClass:[NSArray class]]) {
+                self.gazetaNews = news;
+            }
         }
     }];
     
@@ -70,6 +65,5 @@
     else {
         [self.output newsObtainFailed:[NSError badServerResponseError]];
     }
-    
 }
 @end

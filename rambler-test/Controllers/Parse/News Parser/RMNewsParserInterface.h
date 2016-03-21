@@ -10,20 +10,18 @@
 #define RMNewsParserInterface_h
 
 #import "RMNewsItem.h"
-
-typedef void(^RMParseCompletion)(NSArray<RMNewsItem*>* items, NSError* error);
+#import "RMParseOperationBase.h"
 
 typedef enum : NSUInteger {
-    RMParseStateIdle,
-    RMParseStateTitle,
-    RMParseStateDescription,
-    RMParseStateImagePath,
-    RMParseStateDate
-} RMParseState;
+    RMParseSourceTypeLenta,
+    RMParseSourceTypeGazeta,
+} RMParseSourceType;
 
 @protocol RMNewsParserInterface <NSObject>
 
--(NSOperation*) parseNewsFromXMLParser:(NSXMLParser*)xmlParser completion:(RMParseCompletion)completion;
+-(void) parseNewsFromXMLParser:(NSXMLParser*)xmlParser
+                    sourceType:(RMParseSourceType)sourceType
+                    completion:(RMParseCompletion)completion;
 
 @end
 

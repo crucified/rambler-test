@@ -13,13 +13,13 @@
 
 #import "RMNewsViewInput.h"
 #import "RMNewsInteractorInput.h"
+#import "RMNewsInteractor.h"
 
 @interface RMNewsPresenterTests : XCTestCase
 
 @property (nonatomic, strong) RMNewsPresenter *presenter;
 
 @property (nonatomic, strong) id mockInteractor;
-@property (nonatomic, strong) id mockRouter;
 @property (nonatomic, strong) id mockView;
 
 @end
@@ -34,11 +34,9 @@
     self.presenter = [[RMNewsPresenter alloc] init];
 
     self.mockInteractor = OCMProtocolMock(@protocol(RMNewsInteractorInput));
-    self.mockRouter = OCMProtocolMock(@protocol(RMNewsRouterInput));
     self.mockView = OCMProtocolMock(@protocol(RMNewsViewInput));
 
     self.presenter.interactor = self.mockInteractor;
-    self.presenter.router = self.mockRouter;
     self.presenter.view = self.mockView;
 }
 
@@ -46,7 +44,6 @@
     self.presenter = nil;
 
     self.mockView = nil;
-    self.mockRouter = nil;
     self.mockInteractor = nil;
 
     [super tearDown];
@@ -67,6 +64,27 @@
     OCMVerify([self.mockView setupInitialState]);
 }
 
+
+-(void) testInteractorCallsNewsObtainedMethodWithNonNilArg
+{
+    //given
+    __block BOOL exitFlag = NO;
+    id presenterMock = OCMPartialMock(self.presenter);
+    
+    OCMStub([presenterMock newsObtained:OCMOCK_ANY]).andDo(^(NSInvocation* inv){exitFlag = YES;}).andForwardToRealObject;
+    RMNewsInteractor* realInteractor = [RMNewsInteractor new];
+    realInteractor.output = presenterMock;
+    
+    //when
+    [realInteractor obtainNews];
+
+    do {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:0];
+    } while (!exitFlag);
+    
+    OCMVerify([presenterMock newsObtained:[OCMArg isNotNil]]);
+    
+}
 #pragma mark - Тестирование методов RMNewsInteractorOutput
 
 @end
