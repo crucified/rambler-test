@@ -73,10 +73,16 @@
     else if ([elementName isEqualToString:@"pubDate"]){
         self.state = RMParseStateDate;
     }
+    else if ([elementName isEqualToString:@"enclosure"]) {
+        self.state = RMParseStateImagePath;
+        NSString* imagePath = [attributeDict objectForKey:@"url"];
+        if ([imagePath isKindOfClass:[NSString class]]) {
+            self.currentItem.imagePath = imagePath;
+        }
+    }
     else {
         self.state = RMParseStateIdle;
     }
-    //картиночек вроде как в газете нету :(
 }
 
 -(void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
@@ -103,16 +109,15 @@
             self.currentItem.date = date;
         }
     }
-    else if (self.state == RMParseStateDescription){
-        if (!self.currentItem.newsDescription) {
-            self.currentItem.newsDescription = string;
-        }
-        else {
-            self.currentItem.newsDescription = [self.currentItem.newsDescription stringByAppendingString:string];;
-        }
-    }
 }
 
+- (void)parser:(NSXMLParser *)parser foundCDATA:(NSData *)CDATABlock
+{
+    if (self.state == RMParseStateDescription){
+        NSString* descStr = [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
+        self.currentItem.newsDescription = descStr;
+    }
+}
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
 {

@@ -14,6 +14,9 @@
 		84A064901C9FE397007A6666 /* RMGazetaParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F62ED31C95F1DF004207F9 /* RMGazetaParseOperation.m */; };
 		84A064911C9FE402007A6666 /* RMRemoteXMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21141C9EC37C00389E30 /* RMRemoteXMLParseOperation.m */; };
 		84A064941C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */; };
+		84A0649C1CA00270007A6666 /* RMAsynchronousImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */; };
+		84A0649E1CA004F5007A6666 /* RMAsyncImageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */; };
+		84A0649F1CA005B4007A6666 /* RMAsynchronousImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */; };
 		921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8321C94418F00658345 /* NSError+CustomErrors.m */; };
 		924770C31C9EF9F000B961C3 /* RMNewsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */; };
 		925D21091C974E4000389E30 /* RMNetworkControllerBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */; };
@@ -76,6 +79,10 @@
 		84A0648F1C9FE393007A6666 /* RMGazetaParseOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGazetaParseOperation_Private.h; sourceTree = "<group>"; };
 		84A064921C9FE418007A6666 /* RMRemoteXMLParseOperation_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRemoteXMLParseOperation_Private.h; sourceTree = "<group>"; };
 		84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRemoteXMLParseOperationTests.m; sourceTree = "<group>"; };
+		84A0649A1CA00270007A6666 /* RMAsynchronousImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMAsynchronousImageView.h; path = "Image View/RMAsynchronousImageView.h"; sourceTree = "<group>"; };
+		84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMAsynchronousImageView.m; path = "Image View/RMAsynchronousImageView.m"; sourceTree = "<group>"; };
+		84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMAsyncImageViewTests.m; sourceTree = "<group>"; };
+		84A064A11CA00C6F007A6666 /* RMAsynchronousImageView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMAsynchronousImageView_Private.h; path = "Image View/RMAsynchronousImageView_Private.h"; sourceTree = "<group>"; };
 		8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		921EA8311C94418F00658345 /* NSError+CustomErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+CustomErrors.h"; path = "Extensions/NSError+CustomErrors.h"; sourceTree = "<group>"; };
 		921EA8321C94418F00658345 /* NSError+CustomErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+CustomErrors.m"; path = "Extensions/NSError+CustomErrors.m"; sourceTree = "<group>"; };
@@ -185,6 +192,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		84A064991CA0020F007A6666 /* Image View */ = {
+			isa = PBXGroup;
+			children = (
+				84A0649A1CA00270007A6666 /* RMAsynchronousImageView.h */,
+				84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */,
+				84A064A11CA00C6F007A6666 /* RMAsynchronousImageView_Private.h */,
+			);
+			name = "Image View";
+			sourceTree = "<group>";
+		};
 		921EA82A1C9437D100658345 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +267,7 @@
 		927A95A81C90B295002D9A0A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84A064991CA0020F007A6666 /* Image View */,
 				921EA82A1C9437D100658345 /* Network */,
 				92EE98DA1C94607700CA3C1B /* News */,
 				92EE98CB1C944B2C00CA3C1B /* Parse */,
@@ -316,6 +334,7 @@
 				925D21161C9ECADA00389E30 /* RMNewsParserTests.m */,
 				84A0648B1C9FE0CE007A6666 /* RMLentaGazetaParseOperationsTests.m */,
 				84A064931C9FE511007A6666 /* RMRemoteXMLParseOperationTests.m */,
+				84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */,
 			);
 			path = "rambler-testTests";
 			sourceTree = "<group>";
@@ -759,6 +778,7 @@
 				92EE991B1C946B4300CA3C1B /* RMNewsPresenter.m in Sources */,
 				928A16DF1C90A81C0076B5BF /* AppDelegate.m in Sources */,
 				928A16DC1C90A81C0076B5BF /* main.m in Sources */,
+				84A0649C1CA00270007A6666 /* RMAsynchronousImageView.m in Sources */,
 				925D21111C9EC34E00389E30 /* RMNetworkControllerBase.m in Sources */,
 				925D21361C9EF0EE00389E30 /* RMParseOperationBase.m in Sources */,
 				921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */,
@@ -770,6 +790,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A0649E1CA004F5007A6666 /* RMAsyncImageViewTests.m in Sources */,
 				925D21091C974E4000389E30 /* RMNetworkControllerBaseTests.m in Sources */,
 				84A064901C9FE397007A6666 /* RMGazetaParseOperation.m in Sources */,
 				84A0648E1C9FE1D6007A6666 /* RMLentaParseOperation.m in Sources */,
@@ -779,6 +800,7 @@
 				92EE992C1C947AD300CA3C1B /* RMNewsPresenterTests.m in Sources */,
 				925D21171C9ECADA00389E30 /* RMNewsParserTests.m in Sources */,
 				92EE992E1C947AD300CA3C1B /* RMNewsViewControllerTests.m in Sources */,
+				84A0649F1CA005B4007A6666 /* RMAsynchronousImageView.m in Sources */,
 				924770C31C9EF9F000B961C3 /* RMNewsInteractor.m in Sources */,
 				92EE992B1C947AD300CA3C1B /* RMNewsInteractorTests.m in Sources */,
 			);

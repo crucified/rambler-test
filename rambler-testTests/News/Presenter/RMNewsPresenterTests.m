@@ -79,7 +79,7 @@
     [realInteractor obtainNews];
 
     do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:0];
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate date]];
     } while (!exitFlag);
     
     OCMVerify([presenterMock newsObtained:[OCMArg isNotNil]]);

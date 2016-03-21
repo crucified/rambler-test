@@ -8,12 +8,13 @@
 
 #import "RMNewsTableViewCell.h"
 #import "RMNewsItem.h"
+#import "RMAsynchronousImageView.h"
 
 static CGFloat const RMBriefCellHeight = 106;
 
 @interface RMNewsTableViewCell()
 
-@property (weak, nonatomic) IBOutlet UIImageView* newsImageView;
+@property (weak, nonatomic) IBOutlet RMAsynchronousImageView* newsImageView;
 @property (weak, nonatomic) IBOutlet UILabel* titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel* descriptionLabel;
 @property (assign, nonatomic) BOOL isBrief;
@@ -46,10 +47,9 @@ static CGFloat const RMBriefCellHeight = 106;
 
 -(void) setNews:(RMNewsItem*)news
 {
-    //TODO: add image async-ly
-    
     self.titleLabel.text = news.title;
     self.descriptionLabel.text = news.newsDescription;
+    [self.newsImageView setAsynchronousImageWithPath:news.imagePath];
 }
 
 -(void) expandView

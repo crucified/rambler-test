@@ -39,6 +39,12 @@
         XCTAssertNil(error);
         XCTAssertNotNil(items);
         XCTAssertEqual(items.count, 2);
+        RMNewsItem* firstItem = items.firstObject;
+        XCTAssert(firstItem.title != nil);
+        XCTAssert(firstItem.newsDescription != nil);
+        XCTAssert(firstItem.date != nil);
+        XCTAssert(firstItem.imagePath != nil);
+        
         exitFlag = YES;
     }];
 
@@ -60,6 +66,11 @@
         XCTAssertNil(error);
         XCTAssertNotNil(items);
         XCTAssertEqual(items.count, 3);
+        RMNewsItem* firstItem = items.firstObject;
+        XCTAssert(firstItem.title != nil);
+        XCTAssert(firstItem.newsDescription != nil);
+        XCTAssert(firstItem.date != nil);
+        
         exitFlag = YES;
     }];
     
