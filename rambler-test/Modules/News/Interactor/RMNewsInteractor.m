@@ -28,6 +28,9 @@
 #pragma mark - Методы RMNewsInteractorInput
 -(void) obtainNews
 {
+    self.lentaNews = nil;
+    self.gazetaNews = nil;
+    
     NSOperation* downloadLentaOp = [self.lentaNewsController downloadNewsWithCompletionHandler:^(NSArray *news, NSError *error) {
         if (!error) {
             if ([news isKindOfClass:[NSArray class]]) {
