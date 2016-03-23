@@ -17,6 +17,7 @@
 		84A0649C1CA00270007A6666 /* RMAsynchronousImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */; };
 		84A0649E1CA004F5007A6666 /* RMAsyncImageViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */; };
 		84A0649F1CA005B4007A6666 /* RMAsynchronousImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */; };
+		84AB125A1CA2784A00DE486A /* RMNewsControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AB12591CA2784A00DE486A /* RMNewsControllerBase.m */; };
 		921EA8331C94418F00658345 /* NSError+CustomErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 921EA8321C94418F00658345 /* NSError+CustomErrors.m */; };
 		924770C31C9EF9F000B961C3 /* RMNewsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EE99091C946B4300CA3C1B /* RMNewsInteractor.m */; };
 		925D21091C974E4000389E30 /* RMNetworkControllerBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925D21081C974E4000389E30 /* RMNetworkControllerBaseTests.m */; };
@@ -83,6 +84,8 @@
 		84A0649B1CA00270007A6666 /* RMAsynchronousImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMAsynchronousImageView.m; path = "Image View/RMAsynchronousImageView.m"; sourceTree = "<group>"; };
 		84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMAsyncImageViewTests.m; sourceTree = "<group>"; };
 		84A064A11CA00C6F007A6666 /* RMAsynchronousImageView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMAsynchronousImageView_Private.h; path = "Image View/RMAsynchronousImageView_Private.h"; sourceTree = "<group>"; };
+		84AB12581CA2784A00DE486A /* RMNewsControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsControllerBase.h; sourceTree = "<group>"; };
+		84AB12591CA2784A00DE486A /* RMNewsControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsControllerBase.m; sourceTree = "<group>"; };
 		8DFE38DC76E60D00CDF3B833 /* Pods-rambler-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rambler-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rambler-testTests/Pods-rambler-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		921EA8311C94418F00658345 /* NSError+CustomErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+CustomErrors.h"; path = "Extensions/NSError+CustomErrors.h"; sourceTree = "<group>"; };
 		921EA8321C94418F00658345 /* NSError+CustomErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+CustomErrors.m"; path = "Extensions/NSError+CustomErrors.m"; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 				92F62EB91C95D858004207F9 /* Gazeta */,
 				92EE98E01C94623F00CA3C1B /* Lenta */,
 				92F62EBD1C95D8CF004207F9 /* RMNewsControllerInterface.h */,
+				84AB12581CA2784A00DE486A /* RMNewsControllerBase.h */,
+				84AB12591CA2784A00DE486A /* RMNewsControllerBase.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -771,6 +776,7 @@
 				92F62ED41C95F1DF004207F9 /* RMGazetaParseOperation.m in Sources */,
 				92EE99191C946B4300CA3C1B /* RMNewsAssembly.m in Sources */,
 				925D21151C9EC37C00389E30 /* RMRemoteXMLParseOperation.m in Sources */,
+				84AB125A1CA2784A00DE486A /* RMNewsControllerBase.m in Sources */,
 				92F62EBC1C95D88B004207F9 /* RMNewsControllerGazeta.m in Sources */,
 				92F62EB71C94B241004207F9 /* RMNewsTableViewCell.m in Sources */,
 				925D21401C9EF30A00389E30 /* RMNewsParser.m in Sources */,

@@ -7,61 +7,14 @@
 //
 
 #import "RMNewsControllerGazeta.h"
-#import "RMRemoteXMLParseOperation.h"
-#import "RMNetworkControllerBase.h"
-#import "RMNewsParser.h"
 
 static NSString* const RMGazetaNewsPath = @"http://www.gazeta.ru/export/rss/lenta.xml";
 
-@interface RMNewsControllerGazeta()
-
-@property (strong, nonatomic) id<RMNetworkControllerInterface> networkController;
-@property (weak, nonatomic) id<RMNewsParserInterface> parser;
-@property (strong, nonatomic) NSOperationQueue* operationQueue;
-
-@end
-
-
 @implementation RMNewsControllerGazeta
-
--(instancetype) init
-{
-    self = [super init];
-    if (self) {
-        _operationQueue = [NSOperationQueue new];
-        _operationQueue.qualityOfService = NSQualityOfServiceDefault;
-        _networkController = [RMNetworkControllerBase new];
-        _parser = [RMNewsParser sharedInstance];
-    }
-    return self;
-}
 
 -(NSOperation*) downloadNewsWithCompletionHandler:(RMNewsDownloadCompletionHandler)completion
 {
-    NSOperation* operation = [RMRemoteXMLParseOperation operationWithPath:RMGazetaNewsPath
-                                                               parameters:nil
-                                                                   loader:self.networkController
-                                                                   parser:_parser
-                                                               sourceType:RMParseSourceTypeGazeta
-                                                               completion:^(NSArray *news, NSError *error)
-                              {
-                                  if (error){
-                                      if (completion) {
-                                          completion(nil, error);
-                                      }
-                                  }
-                                  else {
-                                      if (completion) {
-                                          completion(news, error);
-                                      }
-                                  }
-                              }];
-    
-    [self.operationQueue addOperation:operation];
-    
-    return operation;
-    
-    
+    return [self downloadNewsWithPath:RMGazetaNewsPath sourceType:RMParseSourceTypeGazeta completionHandler:completion];
 }
 
 @end

@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "RMNewsControllerInterface.h"
+#import "RMNewsControllerBase.h"
 
 /// Lenta news class
-@interface RMNewsControllerLenta : NSObject<RMNewsControllerInterface>
+@interface RMNewsControllerLenta : RMNewsControllerBase<RMNewsControllerInterface>
 
 @end

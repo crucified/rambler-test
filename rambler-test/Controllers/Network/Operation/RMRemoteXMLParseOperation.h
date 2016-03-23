@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "RMNewsParserInterface.h"
+#import "RMNewsControllerInterface.h"
 #import "RMNetworkControllerInterface.h"
 
-typedef void(^RMNewsDownloadCompletionHandler)(NSArray* news, NSError* error);
 
 @interface RMRemoteXMLParseOperation : NSOperation
 

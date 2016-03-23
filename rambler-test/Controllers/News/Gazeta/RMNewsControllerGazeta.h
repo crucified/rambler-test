@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "RMNewsControllerInterface.h"
+#import "RMNewsControllerBase.h"
 
-@interface RMNewsControllerGazeta : NSObject<RMNewsControllerInterface>
+@interface RMNewsControllerGazeta : RMNewsControllerBase<RMNewsControllerInterface>
 
 @end
