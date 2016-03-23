@@ -106,4 +106,19 @@
     OCMExpect([self.mockOutput newsObtainFailed:[OCMArg isNotNil]]);
 }
 
+-(void) testArrays
+{
+    NSArray* lentaNews = @[@"a", @"b"];
+    NSArray* gazetaNews = @[@"c", @"d", @"e"];
+    
+    NSArray* catArray = [@[] arrayByAddingObjectsFromArray:lentaNews];
+    XCTAssert(catArray.count == 2);
+    
+    catArray = [[@[] arrayByAddingObjectsFromArray:nil] arrayByAddingObjectsFromArray:gazetaNews];
+    XCTAssert(catArray.count == 3);
+    
+    catArray = [@[] arrayByAddingObjectsFromArray:nil];
+    XCTAssert(catArray.count == 0);
+}
+
 @end
