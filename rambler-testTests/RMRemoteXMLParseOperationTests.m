@@ -38,7 +38,7 @@
     id loader = OCMProtocolMock(@protocol(RMNetworkControllerInterface));
     OCMStub([loader performGETRequestWithPath:OCMOCK_ANY params:OCMOCK_ANY completion:([OCMArg invokeBlockWithArgs:[NSNull null], [NSNull null], nil])]);
     
-    id parser = [RMNewsParser sharedInstance];
+    id parser = [RMNewsParser new];
     
     __block BOOL exitFlag = NO;
     self.remoteParseOp.loader = loader;

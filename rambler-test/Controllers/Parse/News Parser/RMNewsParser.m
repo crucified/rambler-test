@@ -14,22 +14,15 @@
 
 @implementation RMNewsParser
 
-+(instancetype) sharedInstance
-{
-    static RMNewsParser* instance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        instance = [RMNewsParser new];
-    });
-    return instance;
-}
-
 -(instancetype) init
 {
     self = [super init];
     if (self) {
         _parseQueue = [NSOperationQueue new];
         _parseQueue.qualityOfService = NSQualityOfServiceDefault;
+        NSDateFormatter* dateFormatter = [NSDateFormatter new];
+        dateFormatter.dateFormat = @"EEE, dd MM yyyy HH:mm:SS ZZZ";
+        _dateFormatter = dateFormatter; //можно разные dateFormatterы для каждого парсера, но так-то он один общий
     }
     return self;
 }
@@ -48,11 +41,11 @@
     NSOperation* op = nil;
     switch (sourceType) {
         case RMParseSourceTypeLenta:{
-            op = [RMLentaParseOperation operationWithParser:xmlParser completion:completion];
+            op = [RMLentaParseOperation operationWithParser:xmlParser dateFormatter:self.dateFormatter completion:completion];
             break;
         }
         case RMParseSourceTypeGazeta:{
-            op = [RMGazetaParseOperation operationWithParser:xmlParser completion:completion];
+            op = [RMGazetaParseOperation operationWithParser:xmlParser dateFormatter:self.dateFormatter completion:completion];
             break;
         }
         default:
@@ -71,6 +64,7 @@
 -(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"isFinished"] && [object isKindOfClass:[RMParseOperationBase class]]) {
+        [object removeObserver:self forKeyPath:@"isFinished"];
         RMParseOperationBase* op = (RMParseOperationBase*) object;
         if (op.isFinished && op.completion) {
             if (op.parseError) {

@@ -35,8 +35,7 @@
 
 -(void) newsObtainFailed:(NSError *)error
 {
-    //TODO: show error
-//    self.view 
+    [self.view showErrorWithTitle:@"Messages error" message:@"No news obtained"];
 }
 
 

@@ -14,4 +14,5 @@
 @property (assign, nonatomic) RMParseState state;
 @property (strong, nonatomic) NSDateFormatter* dateFormatter;
 @property (strong, nonatomic) NSXMLParser* parser;
+@property (strong, nonatomic) NSDateFormatter* parseDateFormatter;
 @end

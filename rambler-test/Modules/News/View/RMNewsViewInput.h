@@ -17,4 +17,6 @@
 -(void) setupInitialState;
 
 -(void) showNews:(NSArray<RMNewsItem*>*) news;
+
+-(void) showErrorWithTitle:(NSString*)title message:(NSString*)message;
 @end

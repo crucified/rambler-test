@@ -11,6 +11,4 @@
 
 @interface RMNewsParser : NSObject<RMNewsParserInterface>
 
-+(instancetype) sharedInstance;
-
 @end

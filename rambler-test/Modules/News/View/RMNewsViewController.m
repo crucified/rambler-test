@@ -43,6 +43,12 @@ static NSString* const RMNewsCellReuseID = @"newsCell";
     [self.tableView reloadData];
 }
 
+-(void) showErrorWithTitle:(NSString *)title message:(NSString *)message
+{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+    [alert show];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

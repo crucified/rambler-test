@@ -15,13 +15,11 @@
 @synthesize parseError = _parseError;
 
 
-+(instancetype) operationWithParser:(NSXMLParser *)parser completion:(RMParseCompletion)completion
++(instancetype) operationWithParser:(NSXMLParser *)parser dateFormatter:(NSDateFormatter *)dateFormatter completion:(RMParseCompletion)completion
 {
     RMGazetaParseOperation* op = [RMGazetaParseOperation new];
     parser.delegate = op;
     op.parser = parser;
-    NSDateFormatter* dateFormatter = [NSDateFormatter new];
-    dateFormatter.dateFormat = @"EEE, dd MM yyyy HH:mm:SS ZZZ";
     op.dateFormatter = dateFormatter;
     op.completion = completion;
     

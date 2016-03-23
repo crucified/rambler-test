@@ -11,5 +11,6 @@
 @interface RMNewsParser()<NSXMLParserDelegate>
 
 @property (strong, nonatomic) NSOperationQueue* parseQueue;
+@property (strong, nonatomic) NSDateFormatter* dateFormatter;
 
 @end

@@ -13,7 +13,7 @@
 
 @interface RMNewsControllerBase()
 
-@property (weak, nonatomic) id<RMNewsParserInterface> parser;
+@property (strong, nonatomic) id<RMNewsParserInterface> parser;
 @property (strong, nonatomic) id<RMNetworkControllerInterface> networkController;
 @property (strong, nonatomic) NSOperationQueue* operationQueue;
 @property (strong, nonatomic) NSOperation* currentOperation;
@@ -25,7 +25,7 @@
 {
     self = [super init];
     if (self) {
-        _parser = [RMNewsParser sharedInstance];
+        _parser = [RMNewsParser new];
         _networkController = [RMNetworkControllerBase new];
         _operationQueue = [NSOperationQueue new];
         _operationQueue.qualityOfService = NSQualityOfServiceDefault;

@@ -16,6 +16,6 @@
 @property (copy, nonatomic) RMParseCompletion completion;
 @property (assign, nonatomic) BOOL isRunning;
 
-+(instancetype) operationWithParser:(NSXMLParser*)parser completion:(RMParseCompletion)completion;
++(instancetype) operationWithParser:(NSXMLParser*)parser dateFormatter:(NSDateFormatter*)dateFormatter completion:(RMParseCompletion)completion;
 
 @end
