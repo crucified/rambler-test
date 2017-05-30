@@ -33,7 +33,7 @@
     NSString* validResponse = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[validResponse dataUsingEncoding:NSUTF8StringEncoding]];
 
-    __block BOOL exitFlag = NO;
+    XCTestExpectation *expectation = [self expectationWithDescription: @""];
     //when
     [self.parser parseNewsFromXMLParser:parser sourceType:RMParseSourceTypeLenta completion:^(NSArray<RMNewsItem *> *items, NSError *error) {
         XCTAssertNil(error);
@@ -44,14 +44,16 @@
         XCTAssert(firstItem.newsDescription != nil);
         XCTAssert(firstItem.date != nil);
         XCTAssert(firstItem.imagePath != nil);
+        [expectation fulfill];
         
-        exitFlag = YES;
+        
     }];
 
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    } while (!exitFlag);
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
 }
 
 - (void)testValidGazetaResponse {
@@ -60,7 +62,7 @@
     NSString* validResponse = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[validResponse dataUsingEncoding:NSUTF8StringEncoding]];
     
-    __block BOOL exitFlag = NO;
+    XCTestExpectation *expectation = [self expectationWithDescription: @""];
     //when
     [self.parser parseNewsFromXMLParser:parser sourceType:RMParseSourceTypeGazeta completion:^(NSArray<RMNewsItem *> *items, NSError *error) {
         XCTAssertNil(error);
@@ -71,13 +73,14 @@
         XCTAssert(firstItem.newsDescription != nil);
         XCTAssert(firstItem.date != nil);
         
-        exitFlag = YES;
+        [expectation fulfill];
     }];
     
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    } while (!exitFlag);
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
 }
 
 
@@ -87,18 +90,19 @@
     NSString* validResponse = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[validResponse dataUsingEncoding:NSUTF8StringEncoding]];
     
-    __block BOOL exitFlag = NO;
+    XCTestExpectation *expectation = [self expectationWithDescription: @""];
     //when
     [self.parser parseNewsFromXMLParser:parser sourceType:RMParseSourceTypeLenta completion:^(NSArray<RMNewsItem *> *items, NSError *error) {
         XCTAssertNotNil(error);
         XCTAssertNil(items);
-        exitFlag = YES;
+        [expectation fulfill];
     }];
     
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    } while (!exitFlag);
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
 }
 
 - (void)testBadXMLLentaResponseCompletionWithErrorTriggered {
@@ -107,18 +111,19 @@
     NSString* validResponse = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[validResponse dataUsingEncoding:NSUTF8StringEncoding]];
     
-    __block BOOL exitFlag = NO;
+    XCTestExpectation *expectation = [self expectationWithDescription:@""];
     //when
     [self.parser parseNewsFromXMLParser:parser sourceType:RMParseSourceTypeLenta completion:^(NSArray<RMNewsItem *> *items, NSError *error) {
         XCTAssertNotNil(error);
         XCTAssertNil(items);
-        exitFlag = YES;
+        [expectation fulfill];
     }];
     
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    } while (!exitFlag);
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
 }
 
 -(void) testTwoOpAtOnceAllGood

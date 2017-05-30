@@ -37,21 +37,19 @@
     //given
     NSString* path = @"http://lenta.ru/rss";
 
-    __block BOOL exitFlag = NO;
-
     //when
+    XCTestExpectation *expectation = [self expectationWithDescription: @""];
     [self.netController performGETRequestWithPath:path params:nil completion:^(NSXMLParser *responseObject, NSError *error) {
         XCTAssert(error == nil);
         XCTAssert([responseObject isKindOfClass:[NSXMLParser class]]);
-        exitFlag = YES;
+        [expectation fulfill];
     }];
     
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    } while (!exitFlag);
-    
-    
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
 }
 
 -(void) testBadPathCalledFailCompletionTriggered
@@ -59,20 +57,22 @@
     //given
     NSString* badPath = @"http://ya.ru";
     
-
-    __block BOOL exitFlag = NO;
     
     //when
+    XCTestExpectation *expectation = [self expectationWithDescription: @""];
     [self.netController performGETRequestWithPath:badPath params:nil completion:^(NSXMLParser *responseObject, NSError *error) {
         //then
         XCTAssert(error != nil);
-        exitFlag = YES;
+        [expectation fulfill];
     }];
     
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    } while (!exitFlag);
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
+    
+    
 }
 
 

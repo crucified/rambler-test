@@ -40,21 +40,22 @@
     
     id parser = [RMNewsParser sharedInstance];
     
-    __block BOOL exitFlag = NO;
+    XCTestExpectation *expectation = [self expectationWithDescription: @""];
     self.remoteParseOp.loader = loader;
     self.remoteParseOp.parser = parser;
     self.remoteParseOp.completion = ^void(NSArray* news, NSError* error){
         XCTAssert(news == nil);
         XCTAssert(error != nil);
-        exitFlag = YES;
+        [expectation fulfill];
     };
     
     [self.remoteParseOp start];
     
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
-                                 beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]];
-    } while (!exitFlag);
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
 }
 
 @end

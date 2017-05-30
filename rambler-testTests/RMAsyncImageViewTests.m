@@ -34,46 +34,51 @@
 - (void) testValidImagePath
 {
     //given
-    __block BOOL exitFlag = NO;
+    XCTestExpectation *expectation = [self expectationWithDescription: @""];
     NSString* validImagePath = @"https://pixabay.com/static/uploads/photo/2015/10/01/21/39/background-image-967820_960_720.jpg";
     
     id imageViewMock = OCMPartialMock(self.imageView);
-    OCMStub([imageViewMock setImage:OCMOCK_ANY]).andDo(^(NSInvocation* inv){exitFlag = YES;}).andForwardToRealObject;
+    OCMStub([imageViewMock setImage:OCMOCK_ANY]).andForwardToRealObject().andDo(^(NSInvocation* inv){
+        [inv invoke];
+        XCTAssert(self.imageView.image != nil);
+        XCTAssert(self.imageView.spinner.hidden);
+        [expectation fulfill];
+    });
     
     //when
     [self.imageView setAsynchronousImageWithPath:validImagePath];
     
     
     //then
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate date]];
-    } while (!exitFlag);
+    [self waitForExpectationsWithTimeout:2 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
     
-    XCTAssert(self.imageView.image != nil);
-    XCTAssert(self.imageView.spinner.hidden);
 }
 
 -(void) testCorruptedImagePathNoSetImage
 {
     //given
-    __block BOOL exitFlag = NO;
+    XCTestExpectation *expectation = [self expectationWithDescription: @""];
     NSString* corruptedImagePath = @"https://pixabay.com/";
     
     id imageViewMock = OCMPartialMock(self.imageView);
-    OCMStub([imageViewMock setImage:OCMOCK_ANY]).andDo(^(NSInvocation* inv){exitFlag = YES;}).andForwardToRealObject;
+    OCMStub([imageViewMock setImage:OCMOCK_ANY]).andDo(^(NSInvocation* inv){
+        XCTAssert(self.imageView.image == nil);
+        XCTAssert(self.imageView.spinner.hidden);
+        [expectation fulfill];
+    }).andForwardToRealObject;
     
     //when
     [self.imageView setAsynchronousImageWithPath:corruptedImagePath];
     
-    
-    //then
-    do {
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate date]];
-    } while (!exitFlag);
-    
-    XCTAssert(self.imageView.image == nil);
-    XCTAssert(self.imageView.spinner.hidden);
-
+    [self waitForExpectationsWithTimeout:200 handler:^(NSError * _Nullable error) {
+        if (error) {
+            XCTFail(@"timeout");
+        }
+    }];
 }
 
 -(void) testNotAnUrlPathNoSetImage
