@@ -110,8 +110,6 @@
 		928A16EB1C90A81C0076B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		928A16F01C90A81C0076B5BF /* rambler-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rambler-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		928A16F61C90A81C0076B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		928A16FF1C90A81C0076B5BF /* rambler_testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rambler_testUITests.m; sourceTree = "<group>"; };
-		928A17011C90A81C0076B5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92EE98D41C944B5900CA3C1B /* RMNewsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsItem.h; sourceTree = "<group>"; };
 		92EE98D51C944B5900CA3C1B /* RMNewsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNewsItem.m; sourceTree = "<group>"; };
 		92EE98E11C94623F00CA3C1B /* RMNewsControllerLenta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNewsControllerLenta.h; sourceTree = "<group>"; };
@@ -264,7 +262,6 @@
 			children = (
 				928A16D91C90A81C0076B5BF /* rambler-test */,
 				928A16F31C90A81C0076B5BF /* rambler-testTests */,
-				928A16FE1C90A81C0076B5BF /* rambler-testUITests */,
 				928A16D81C90A81C0076B5BF /* Products */,
 				5CBB93DEA09BDF71705C7F18 /* Pods */,
 				BCEB1B099DF6556C8A7FACA0 /* Frameworks */,
@@ -320,15 +317,6 @@
 				84A0649D1CA004F5007A6666 /* RMAsyncImageViewTests.m */,
 			);
 			path = "rambler-testTests";
-			sourceTree = "<group>";
-		};
-		928A16FE1C90A81C0076B5BF /* rambler-testUITests */ = {
-			isa = PBXGroup;
-			children = (
-				928A16FF1C90A81C0076B5BF /* rambler_testUITests.m */,
-				928A17011C90A81C0076B5BF /* Info.plist */,
-			);
-			path = "rambler-testUITests";
 			sourceTree = "<group>";
 		};
 		92EE98CB1C944B2C00CA3C1B /* Parse */ = {

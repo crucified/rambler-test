@@ -14,14 +14,14 @@
 @implementation RMLentaParseOperation
 @synthesize parseError = _parseError;
 
-+(instancetype) operationWithParser:(NSXMLParser *)parser completion:(RMParseCompletion)completion
++(instancetype) operationWithParser:(NSXMLParser *)parser
+                      dateFormatter:(NSDateFormatter *)formatter
+                         completion:(RMParseCompletion)completion
 {
     RMLentaParseOperation* op = [RMLentaParseOperation new];
     parser.delegate = op;
     op.parser = parser;
-    NSDateFormatter* dateFormatter = [NSDateFormatter new];
-    dateFormatter.dateFormat = @"EEE, dd MM yyyy HH:mm:SS ZZZ";
-    op.dateFormatter = dateFormatter;
+    op.dateFormatter = formatter;
     op.completion = completion;
     
     return op;

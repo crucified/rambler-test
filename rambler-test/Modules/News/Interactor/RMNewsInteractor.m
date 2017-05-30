@@ -56,7 +56,15 @@
 
 -(void) prepareNews
 {
-    NSArray* allNews = [self.lentaNews arrayByAddingObjectsFromArray:self.gazetaNews];
+    NSMutableArray *allNews = [NSMutableArray new];
+    if ([self.lentaNews isKindOfClass:[NSArray class]]) {
+        [allNews addObjectsFromArray:self.lentaNews];
+    }
+    
+    if ([self.gazetaNews isKindOfClass:[NSArray class]]) {
+        [allNews addObjectsFromArray:self.gazetaNews];
+    }
+    
     NSSortDescriptor* dateSort = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
     NSArray* sortedNews = [allNews sortedArrayUsingDescriptors:@[dateSort]];
     if (sortedNews) {

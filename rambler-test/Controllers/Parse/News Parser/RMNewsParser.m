@@ -12,6 +12,13 @@
 #import "RMGazetaParseOperation.h"
 #import "NSError+CustomErrors.h"
 
+@interface RMNewsParser()
+
+@property (strong, nonatomic) NSDateFormatter *lentaFormatter;
+@property (strong, nonatomic) NSDateFormatter *gazetaFormatter;
+
+@end
+
 @implementation RMNewsParser
 
 +(instancetype) sharedInstance
@@ -30,6 +37,10 @@
     if (self) {
         _parseQueue = [NSOperationQueue new];
         _parseQueue.qualityOfService = NSQualityOfServiceDefault;
+        NSDateFormatter* dateFormatter = [NSDateFormatter new];
+        dateFormatter.dateFormat = @"EEE, dd MM yyyy HH:mm:SS ZZZ";
+        _lentaFormatter = dateFormatter;
+        _gazetaFormatter = dateFormatter;
     }
     return self;
 }
@@ -48,11 +59,15 @@
     NSOperation* op = nil;
     switch (sourceType) {
         case RMParseSourceTypeLenta:{
-            op = [RMLentaParseOperation operationWithParser:xmlParser completion:completion];
+            op = [RMLentaParseOperation operationWithParser:xmlParser
+                                              dateFormatter:self.lentaFormatter
+                                                 completion:completion];
             break;
         }
         case RMParseSourceTypeGazeta:{
-            op = [RMGazetaParseOperation operationWithParser:xmlParser completion:completion];
+            op = [RMGazetaParseOperation operationWithParser:xmlParser
+                                               dateFormatter: self.gazetaFormatter
+                                                  completion:completion];
             break;
         }
         default:
